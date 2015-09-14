@@ -11,7 +11,7 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     2em;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -22,7 +22,7 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    1000px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -50,3 +50,33 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+
+// Derek's CSS
+
+body {
+	background: radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
+	background: -webkit-radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
+	background: -o-radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
+	background: -ms-radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
+	background-attachment: fixed;
+
+	.site-header {
+		border-top: 0;
+		border-bottom: 0;
+	}
+
+	.page-content, .site-footer {
+		padding: 0;
+
+		.wrapper {
+			padding: $spacing-unit;
+			background-color: #fff;
+		}
+	}
+
+	.site-footer {
+		border-top: 0;
+	}
+}
