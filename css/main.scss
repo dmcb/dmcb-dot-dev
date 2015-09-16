@@ -64,6 +64,10 @@ body {
 	font-family: "omnes-pro";
 	color: #333;
 
+	@include media-query($on-palm) {
+		font-size: 16px;
+	}
+
 	a, a:visited {
 		color: #5d54d6;
 	}
