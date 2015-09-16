@@ -7,7 +7,7 @@
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -61,6 +61,19 @@ body {
 	background: -o-radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
 	background: -ms-radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
 	background-attachment: fixed;
+	font-family: "omnes-pro";
+
+	h1 {
+		font-family: "gnuolane";
+		font-weight: normal;
+		margin-top: 0;
+	}
+
+	h2 {
+		font-family: "gnuolane";
+		font-weight: normal;
+		margin-top: 2em;	
+	}
 
 	.site-header {
 		border-top: 0;
@@ -78,5 +91,6 @@ body {
 
 	.site-footer {
 		border-top: 0;
+		margin-bottom: 3em;
 	}
 }
