@@ -6,7 +6,7 @@ permalink: /about/
 
 <img src="me.jpg"/>
 
-## I'm Derek. 
+# I'm Derek. 
 
 I'm a husband to the best wife and a dad to the best son, and I do a lot of things.
 
