@@ -25,7 +25,7 @@ Fortunately, through the years I've run Drupal and upgraded it from 4 to 5 to 7,
 * A lack of governance
 * No dev to test to prod workflow
 
-I've made significant progress addressing these issues in our current environment and I now have the opportunity to design a new Drupal distribution for the University and build it from the ground up. So I'm inviting you to join me on this initiative. I'm going to discuss all of the issues in greater detail and try to solve them with strategy, design, modules and code. If your tackling a Drupal implementation for your own institution, this should be valuable reading.
+I've made significant progress addressing these issues in our current environment and I now have the opportunity to design and build a new Drupal distribution for the University from the ground up. So I'm inviting you to join me on this initiative. I'm going to discuss all of the issues in greater detail and try to solve them with strategy, design, modules and code. If your tackling a Drupal implementation for your own institution, this should be valuable reading.
 
 ## A warning
 
