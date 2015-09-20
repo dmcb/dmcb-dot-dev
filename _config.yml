@@ -1,6 +1,5 @@
 # Site settings
 title: Derek McBurney
-email: d.mcburney@icloud.com
 description: I'm Derek. I make web.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://derekmcburney.com" # the base hostname & protocol for your site
