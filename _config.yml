@@ -3,6 +3,7 @@ title: Derek McBurney
 description: I'm Derek. I make web.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://derekmcburney.com" # the base hostname & protocol for your site
+permalink: /blog/:title
 
 # Build settings
 markdown: kramdown
