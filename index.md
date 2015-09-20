@@ -17,7 +17,7 @@ The full stack, from backend to UX. I do [consulting for clients](/contact), I l
 
 ## I take photographs.
 
-Okay, everyone takes photographs. But I've been absolutely privileged to be able to take photos for *other* people. [Check out my work](http://photographybyderek.com), and [the blog](http://photographybyderek.com/blog/)
+Okay, everyone takes photographs. But I've been absolutely privileged to be able to take photos for *other* people. [Check out my work](http://photographybyderek.com), and [the blog](http://photographybyderek.com/blog/).
 
 * [500px](http://500px.com/derekmcb)
 * [Instagram](http://instagram.com/derekmcburney)
