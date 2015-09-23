@@ -12,10 +12,10 @@ permalink: /blog/
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <span class="post-meta">
-          {{ post.date | date: "%b %-d, %Y" }}<!-- {% if post.tags %}, {% endif %}
+          {{ post.date | date: "%b %-d, %Y" }}{% if post.tags %}, {% endif %}
           {% for tag in post.tags %}
-          <a class="tag">{{ tag }}</a>
-          {% endfor %} -->
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
         </span>
         <p>{{ post.description }}</p>
       </li>
