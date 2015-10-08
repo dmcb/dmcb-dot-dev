@@ -13,7 +13,7 @@ permalink: /blog/
             {{ post.title }}
           </h2>
           <span class="post-meta">
-            {{ post.date | date: "%b %-d, %Y" }}{% if post.tags %}, {% endif %}
+            {{ post.date | date: "%B %Y" }}{% if post.tags %}, {% endif %}
             {% for tag in post.tags %}
             <span class="tag">{{ tag }}</span>
             {% endfor %}
