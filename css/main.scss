@@ -54,6 +54,7 @@ $on-laptop:        800px;
 
 
 // Derek's CSS
+@import "highlight.css";
 
 body {
 	background: radial-gradient(center center, 50% 70%, #e5e4f1 70%, #d2d4df);
@@ -87,6 +88,17 @@ body {
 
 		@include media-query($on-palm) {
 			margin: 0.5em 0;
+		}
+	}
+
+	pre {
+		border: 0;
+		border-radius: 0;
+		padding: 0;
+
+		code.hljs {
+			border-radius: 0;
+			background-color: #f6f6f6;
 		}
 	}
 
