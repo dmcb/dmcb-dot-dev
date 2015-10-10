@@ -69,18 +69,20 @@ body {
 	}
 
 	a, a:visited {
+		font-weight: 500;
 		color: #5d54d6;
 	}
 
-	h1 {
-		font-family: "brandon-grotesque";
+	h1,h2,h3 {
+		font-family: "katarine-web";
 		font-weight: normal;
+	}
+
+	h1 {
 		margin-top: 0;
 	}
 
 	h2 {
-		font-family: "brandon-grotesque";
-		font-weight: normal;
 		margin-top: 1.5em;	
 
 		@include media-query($on-palm) {
@@ -93,9 +95,13 @@ body {
 		border-top: 0;
 		border-bottom: 0;
 
-		a:hover {
-			text-decoration: none;
-			color: #6b72bb;
+		a {
+			font-weight: normal;
+
+			:hover {
+				text-decoration: none;
+				color: #6b72bb;
+			}
 		}
 
 		@include media-query($on-palm) {
