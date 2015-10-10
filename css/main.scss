@@ -85,7 +85,13 @@ body {
 
 	h2 {
 		margin-top: 1.5em;	
+		@include media-query($on-palm) {
+			margin: 0.5em 0;
+		}
+	}
 
+	h3 {
+		margin-top: 1.5em;
 		@include media-query($on-palm) {
 			margin: 0.5em 0;
 		}
@@ -99,6 +105,18 @@ body {
 		code.hljs {
 			border-radius: 0;
 			background-color: #f6f6f6;
+		}
+	}
+
+	ol {
+		font-weight: 500;
+
+		p {
+			font-weight: normal;
+
+			&:first-child {
+				font-weight: 500;
+			}
 		}
 	}
 
@@ -150,6 +168,7 @@ body {
 
 			a {
 				font-size: 1em;
+				font-weight: normal;
 				padding: 2em;
 				color: #333;
 
