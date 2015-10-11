@@ -1,5 +1,5 @@
 ---
-title: "Creating a Drupal distro that scales - Part 1: Why This Matters"
+title: "Creating A Drupal CMS That Scales - Part 1: Why This Matters"
 layout: post
 image: /files/2015-09-21-drupal-distros-that-scale-part-1/sites.jpg
 tags: 
