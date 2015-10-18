@@ -4,6 +4,9 @@ description: I'm Derek. I make web.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://derekmcburney.com" # the base hostname & protocol for your site
 permalink: /blog/:title
+tag_dir: /blog
+tag_title_prefix: ''
+tag_title_suffix: ''
 
 # Build settings
 markdown: kramdown
