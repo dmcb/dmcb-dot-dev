@@ -138,6 +138,16 @@ body {
 		@include media-query($on-palm) {
 			margin-top: 0;
 		}
+
+		.wrapper {
+			padding-left: 2em;
+			padding-right: 2em;
+
+			@include media-query($on-palm) {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
 	}
 
 	.page-content, .site-footer {
@@ -162,11 +172,42 @@ body {
 		}
 	}
 
-	.post-list {
-		margin: -2em;
+	.post-categories {
+		margin-left: 0;
+		margin: -2em -2em 0 -2em;
+		padding: 0 1em;
+		list-style: none;
+		background-color: #eee;
 
 		@include media-query($on-palm) {
-			margin: -1em;
+			margin: -1em -1em 0 -1em;
+			padding: 0;
+		}
+
+		li {
+			a {
+				float: left;
+				display: block;
+				padding: 0.5em 1.11em;
+				color: #333;
+				font-size: 0.9em;
+			}
+		}
+
+		&:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+	}
+
+	.post-list {
+		margin: 0 -2em -2em -2em;
+
+		@include media-query($on-palm) {
+			margin: 0 -1em -1em -1em;
 		}
 
 		li {
