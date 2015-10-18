@@ -1,5 +1,5 @@
 ---
-title: "Creating A Drupal CMS That Scales - Part 2: Site Deployment"
+title: "Creating A Drupal Distro That Scales - Part 2: Site Deployment"
 layout: post
 image: /files/2015-10-13-drupal-distros-that-scale-part-2/coding.gif
 tags: 
@@ -45,7 +45,7 @@ For those reasons, do not consider template sites. If template sites was the app
 
 ### Install and update hooks
 
-Unlike features modules, creating install and update hooks to deploy configuration requires coding up a module from scratch. So what is an [install hook](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_install/7)? It's logic that your module fires when it is installed for the first time. When you create your blank site and enable your deployment module, the install hook you've created will run, and execute your code. Which means you can use the entire Drupal API, run database queries, and execute actions that a features module is incapable of. That basic page content type we wanted to get rid of? Add a my_module.install file to your deployment module folder with this code, and done:
+Unlike features modules, creating install and update hooks to deploy configuration requires coding up a module from scratch. So what is an [install hook](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_install/7)? It's logic that your module fires when it is installed for the first time. When you create your blank site and enable your deployment module, the install hook you've created will run, and execute your code. Which means you can use the entire Drupal API, run database queries, and execute actions that a features module is incapable of. That basic page content type we wanted to get rid of? Add a `my_module.install` file to your deployment module folder with this code, and done:
 
 	<?php
 
@@ -64,7 +64,7 @@ So what's an [update hook](https://api.drupal.org/api/drupal/modules%21system%21
 
 So what is the solution to avoiding manual site creation? Create a deployment module that featurizes all the configuration you don't want users to change. Add in install/update hooks to set all the configuration you do want users to change and install/update hooks to do the deployment actions that can't be achieved with features alone.
 
-You might be wondering how you can mix a Drupal-generated features module with your own code. It's suprisingly simple: when you've generated your feature module, you can open up the .module file and add code. Subsequent rebuilds of the feature module through the Drupal UI will not overwrite the code in the .module file. Additional files like .install files will also be untouched by feature module generation. So build your feature module through the Drupal UI, add your code, and iterate on both afterwards.
+You might be wondering how you can mix a Drupal-generated features module with your own code. It's suprisingly simple: when you've generated your feature module, you can open up the `.module` file and add code. Subsequent rebuilds of the feature module through the Drupal UI will not overwrite the code in the `.module` file. Additional files like `.install` files will also be untouched by feature module generation. So build your feature module through the Drupal UI, add your code, and iterate on both afterwards.
 
 ## Rolling it out
 
@@ -105,7 +105,7 @@ Here's what a Drupal distribution looks like:
 
 As you can see, it looks exactly like Drupal core - it's a complete, server-ready copy of Drupal and all its files. But it also comes pre-loaded with any additional modules, themes and libraries that the distribution needs. What makes it all work is the installation profile included in the `/profiles` directory that you can select upon Drupal install. This profile will then apply all the configuration and settings your site should begin with. It functions exactly like the install and update hook based deployment module I mentioned previously. So you can write your install hooks directly into this installation profile instead of rolling them into a deployment module if you prefer, just remember it has the same caveats as we mentioned. 
 
-Once your [installation profile is written](http://evolvingweb.ca/blog/creating-multilingual-install-profile-drupal) and all your depedencies added, you can package up the files and roll it out to your servers to deploy your CMS.
+Once your [installation profile is written](http://evolvingweb.ca/blog/creating-multilingual-install-profile-drupal) and all your dependencies added, you can package up the files and roll it out to your servers to deploy your CMS.
 
 ### Drush makefiles
 
