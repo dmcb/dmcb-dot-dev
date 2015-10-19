@@ -6,6 +6,7 @@ permalink: /blog/
 
 <div class="home">
   <ul class="post-categories">
+    {% if site.tags.size > 1 %}
     <li>
       <a class="page-link" href="{{ site.baseurl | append: site.tag_dir }}">All posts</a>
     </li>
@@ -15,6 +16,7 @@ permalink: /blog/
       <a class="page-link" href="{{ site.baseurl | append: site.tag_dir}}/{{ tag[0] }}/">{{ tag[0] | capitalize }}</a>
     </li>
     {% endfor %}
+    {% endif %}
   </ul>
   <ul class="post-list">
     {% for post in site.posts %}
