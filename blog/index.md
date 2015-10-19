@@ -9,7 +9,8 @@ permalink: /blog/
     <li>
       <a class="page-link" href="{{ site.baseurl | append: site.tag_dir }}">All posts</a>
     </li>
-    {% for tag in site.tags %}
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
     <li>
       <a class="page-link" href="{{ site.baseurl | append: site.tag_dir}}/{{ tag[0] }}/">{{ tag[0] | capitalize }}</a>
     </li>
@@ -23,7 +24,7 @@ permalink: /blog/
           {{ post.title }}
         </h2>
         <span class="post-meta">
-          {{ post.date | date: "%B %Y" }}{% for tag in post.tags %}, <span class="tag">{{ tag }}</span>{% endfor %}
+          {{ post.date | date: "%B %Y" }}
         </span>
         <p>{{ post.description }}</p>
       </a>
