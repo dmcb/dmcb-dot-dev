@@ -1,7 +1,7 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 3: Locking It Down"
 layout: post
-image: 
+image: /files/2015-11-12-drupal-distros-that-scale-part-3/admin_permissions.png
 tags: 
 - drupal
 description: "There's only one thing that can stop your organization's site admins from altering your Drupal CMS into every permutation and combination possible: permissions."
