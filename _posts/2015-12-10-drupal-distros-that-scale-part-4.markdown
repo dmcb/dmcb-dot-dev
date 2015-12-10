@@ -70,7 +70,7 @@ Now that we have a workflow to building feature modules, how can a feature modul
 * View that only shows events
 * News nodes tagged 'Press Release' have different styling
 
-As you can see, both sites require the basics of a news content type: a title, date and text. But **Site 1** would like more fields to do with an author (yes, an author should likely be an entity reference to an author content type, but for simplicity's sake in this example we will have it this way). **Site 2** would like an alternate presentation of news, with dates appearing above. Both sites need to make use of a view, but **Site 2** would like their view to only show news tagged with event.
+As you can see, both sites require the basics of a news content type: a title, date and text. But **Site 1** would like more fields to do with an author (yes, an author should likely be an entity reference to an author content type, but for simplicity's sake in this example we will have it this way). **Site 2** would like an alternate presentation of news, with 'Press Release' tagged items getting a different treatment. Both sites need to make use of a view, but **Site 2** would like their view to only show news tagged with 'Event'.
 
 It seems difficult, but possible to build a feature module to handle news for both sites. However, the authoring experience may be quite clunky, and we may have similar but mostly repetitive views, and likely need to write some per-site CSS to handle presentation. But we can do it. If we had a third site with different requirements still, it may break our solution.
 
