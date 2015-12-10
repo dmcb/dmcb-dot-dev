@@ -1,7 +1,7 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 4: Crafting Great Features"
 layout: post
-image: 
+image: /files/2015-12-10-drupal-distros-that-scale-part-4/news_content_editing.gif
 tags: 
 - drupal
 description: "How can your Drupal functionality be flexible enough for your site admins to get what they need out of it, while being general enough that it exists as one module you can maintain?"
