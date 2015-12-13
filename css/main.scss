@@ -214,6 +214,11 @@ body {
 			margin: 0;
 
 			a {
+				-webkit-transition: 200ms ease all;
+				-moz-transition: 200ms ease all;
+				-ms-transition: 200ms ease all;
+				-o-transition: 200ms ease all;
+				transition: 200ms ease all;
 				font-size: 1em;
 				font-weight: normal;
 				padding: 2em;
@@ -237,7 +242,7 @@ body {
 				}
 
 
-				&:hover {
+				&:hover, &:active {
 					text-decoration: none;
 					color: #fff;
 					background-color: #5d54d6;
