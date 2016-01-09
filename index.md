@@ -10,7 +10,7 @@ I'm a husband to the best wife and a dad to the best son, and I do a lot of thin
 
 ## I make web.
 
-The full stack, from backend to UX. I do [consulting for clients](/contact), I like using all sorts of technologies, but I specialize in Drupal. Where development meets rich content is where I like to be. I have a leadership role building the University of Calgary's web experience.
+The full stack, from backend to UX. I do [consulting for clients](mailto:derek@dmcbdesign.com), I like using all sorts of technologies, but I specialize in [Drupal](https://www.drupal.org). Where development meets rich content is where I like to be. I had a lead role building the University of Calgary's web experience, now I'm pushing digital forward with the brilliant minds at [Evans Hunt](http://www.evanshunt.com).
 
 * [LinkedIn](http://www.linkedin.com/in/derekmcburney)
 * [GitHub](https://github.com/dmcb)
