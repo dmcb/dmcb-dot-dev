@@ -1,9 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 4: Crafting Great Features"
-layout: post
 image: /files/2015-12-10-drupal-distros-that-scale-part-4/news_content_editing.gif
-tags: 
-- drupal
 description: "How can your Drupal functionality be flexible enough for your site admins to get what they need out of it, while being general enough that it exists as one module you can maintain?"
 ---
 
@@ -41,7 +38,7 @@ Now that we have a less blurry vision than Drupal provides of what functionality
 ## A Workflow
 
 Drupal is powerful and allows lots of functionality to be built through the user interface without needing code. Leveraging that power for rapid development is great as long as we remember what we build must make it to code so that it meets our definition of functionality, and it can be deployed across many sites. The [features modules](https://www.drupal.org/project/features) allows us to do that conversion from user interface into code. [More detail on this is provided in a previous post](/blog/drupal-distros-that-scale-part-2/).
- 
+
 1. Build content types, views, permissions, etc. on a site through the UI.
 2. Check off everything that was built for inclusion into a feature module.
 3. Generate your feature to the file system.
@@ -76,13 +73,13 @@ It seems difficult, but possible to build a feature module to handle news for bo
 
 Or, are there some tricks we can use to generalize our feature module to handle both cases and even more we haven't thought of?
 
-### Fields 
+### Fields
 
 Let's build out our news content type. In order to accomodate both **Site 1** and **Site 2**'s requirements, we need to add all fields needed by both:
 
 ![Fields](/files/2015-12-10-drupal-distros-that-scale-part-4/news_fields.png)
 
-This results in a clunky user experience for **Site 2**, as **Site 2** doesn't need fields for authors. But in order to server both sites with the same feature, we need to include all fields. But there is an option for making a better content editing experience, [Conditional Fields](https://www.drupal.org/project/conditional_fields). We can add an 'Add Author' list field with two options, yes or no, to our content type. We can then add a field dependency through Conditional Fields to show (or even require) the Author fields based on what is selected for the 'Add Author' field. As this field is only used to internally to manage this content type, make sure to hide it in the 'Manage Display' section of the content type. 
+This results in a clunky user experience for **Site 2**, as **Site 2** doesn't need fields for authors. But in order to server both sites with the same feature, we need to include all fields. But there is an option for making a better content editing experience, [Conditional Fields](https://www.drupal.org/project/conditional_fields). We can add an 'Add Author' list field with two options, yes or no, to our content type. We can then add a field dependency through Conditional Fields to show (or even require) the Author fields based on what is selected for the 'Add Author' field. As this field is only used to internally to manage this content type, make sure to hide it in the 'Manage Display' section of the content type.
 
 ![Conditional fields](/files/2015-12-10-drupal-distros-that-scale-part-4/news_conditional_fields.png)
 
@@ -118,7 +115,7 @@ Once we have generated the feature to code, we can open up the generated `.modul
 
             // Get vocabulary id (vid) of tags taxonomy that news uses
             $vid = db_query('SELECT vid FROM {taxonomy_vocabulary} WHERE machine_name = :machine_name', array(':machine_name' => 'tags'))->fetchField();
-            
+
             // Get taxonomy term id (tid) of 'Press Release'
             $query = new EntityFieldQuery;
             $result = $query

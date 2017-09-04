@@ -1,9 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 3: Locking It Down"
-layout: post
 image: /files/2015-11-12-drupal-distros-that-scale-part-3/admin_permissions.png
-tags: 
-- drupal
 description: "There's only one thing that can stop your organization's site admins from altering your Drupal CMS into every permutation and combination possible: permissions."
 ---
 
@@ -63,7 +60,7 @@ Two other roles I like to add are Content Administrators and Content Authors. Co
 
 ### The Developer
 
-If you ever intend to have developers build or improve the functionality of your Drupal CMS, you'll need to give them many of the permissions that you just spent all this time locking down. Enter the Developer role. Many of the scariest permissions we removed for other users will likely be needed by your developers, such as `Administer features`, `Administer views` and `Administer content types`. But if we let our developer have these abilities doesn't this mean even after all our hard work we still have a Drupal CMS that can take on crazy new forms without our oversight? No, at least, not in production. The key is to **make sure the Developer role is never allowed in production**. Keep developers on development environments. I will cover workflow and governance with much greater detail in future posts. 
+If you ever intend to have developers build or improve the functionality of your Drupal CMS, you'll need to give them many of the permissions that you just spent all this time locking down. Enter the Developer role. Many of the scariest permissions we removed for other users will likely be needed by your developers, such as `Administer features`, `Administer views` and `Administer content types`. But if we let our developer have these abilities doesn't this mean even after all our hard work we still have a Drupal CMS that can take on crazy new forms without our oversight? No, at least, not in production. The key is to **make sure the Developer role is never allowed in production**. Keep developers on development environments. I will cover workflow and governance with much greater detail in future posts.
 
 There are a lot of ways you can prevent the Developer role from being used in production such as not granting users that role in production or deleting the role from production sites, but those methods all involve a manual step that could be missed. We need to be absolutely certain that developer functions can't be accessed in production, so with that in mind here is code we are prototyping for our new Drupal launch:
 
@@ -109,6 +106,6 @@ That was a lot of information to take in. But if there's one thing to do right f
 * Protect user one from all other users
 * Start with no permissions enabled and add them as you need them
 * Make permissions as granular as you need them by seeking out contributed module solutions or writing custom code
-* Keep roles focused and describe users with multiple roles 
+* Keep roles focused and describe users with multiple roles
 * Don't allow administrators to set permissions
 * Developer permissions should only be granted on development servers

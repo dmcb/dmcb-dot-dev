@@ -1,9 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 2: Site Deployment"
-layout: post
 image: /files/2015-10-13-drupal-distros-that-scale-part-2/coding.gif
-tags: 
-- drupal
 description: "So it's time for you to build your Drupal CMS. You install Drupal, generate your new site and log in. After checking off about forty-thousand config options, you're done. You have a site. Now launch your next dozen sites."
 ---
 
@@ -103,7 +100,7 @@ Here's what a Drupal distribution looks like:
 	-rw-r--r--@  1 derekmcburney  staff   2178  2 Sep 14:45 web.config
 	-rw-r--r--@  1 derekmcburney  staff    417  2 Sep 14:45 xmlrpc.php
 
-As you can see, it looks exactly like Drupal core - it's a complete, server-ready copy of Drupal and all its files. But it also comes pre-loaded with any additional modules, themes and libraries that the distribution needs. What makes it all work is the installation profile included in the `/profiles` directory that you can select upon Drupal install. This profile will then apply all the configuration and settings your site should begin with. It functions exactly like the install and update hook based deployment module I mentioned previously. So you can write your install hooks directly into this installation profile instead of rolling them into a deployment module if you prefer, just remember it has the same caveats as we mentioned. 
+As you can see, it looks exactly like Drupal core - it's a complete, server-ready copy of Drupal and all its files. But it also comes pre-loaded with any additional modules, themes and libraries that the distribution needs. What makes it all work is the installation profile included in the `/profiles` directory that you can select upon Drupal install. This profile will then apply all the configuration and settings your site should begin with. It functions exactly like the install and update hook based deployment module I mentioned previously. So you can write your install hooks directly into this installation profile instead of rolling them into a deployment module if you prefer, just remember it has the same caveats as we mentioned.
 
 Once your [installation profile is written](http://evolvingweb.ca/blog/creating-multilingual-install-profile-drupal) and all your dependencies added, you can package up the files and roll it out to your servers to deploy your CMS.
 

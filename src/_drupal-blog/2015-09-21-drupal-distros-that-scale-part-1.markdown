@@ -1,9 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 1: Why This Matters"
-layout: post
 image: /files/2015-09-21-drupal-distros-that-scale-part-1/sites.jpg
-tags: 
-- drupal
 description: "Drupal is a powerful platform for website generation, but once you unleash it upon your institution, everything that can happen will happen. This is my guide to ensuring only the good things happen."
 ---
 
