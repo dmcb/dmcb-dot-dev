@@ -5,7 +5,7 @@ title: Drupal Blog
 
 <div class="home">
   <ul class="post-list">
-    {% assign post-list = site.drupal-blog | sort:"date" %}  
+    {% assign post-list = site.drupal-blog-posts | sort:"date" | reverse %}  
     {% for post in post-list %}
     <li>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">

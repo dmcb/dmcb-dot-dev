@@ -12,13 +12,13 @@ destination: _site
 
 # Collections
 collections:
-  drupal-blog:
+  drupal-blog-posts:
     output: true
-    permalink: /:collection/:title/
+    permalink: /things/drupal-blog/:title/
 
 defaults:
   - scope:
       path: ""
-      type: drupal-blog
+      type: drupal-blog-posts
     values:
-      layout: post
+      layout: drupal-blog-post

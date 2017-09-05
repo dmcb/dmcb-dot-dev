@@ -21,9 +21,7 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - All" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  {% for tag in site.tags %}<link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ tag[0] | capitalize }}" href="{{ tag[0] | prepend: '/feed-' | prepend: site.baseurl | prepend: site.url | append: '.xml' }}" />
-  {% endfor %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Drupal blog posts" href="{{ "/feed-drupal-blog-posts.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <script src="{{ "/js/highlight.js" | prepend: site.baseurl }}"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
