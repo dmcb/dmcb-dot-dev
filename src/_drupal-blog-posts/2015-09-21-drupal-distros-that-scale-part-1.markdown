@@ -1,6 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 1: Why This Matters"
-image: /files/2015-09-21-drupal-distros-that-scale-part-1/sites.jpg
+image: /img/drupal-blog/2015-09-21-drupal-distros-that-scale-part-1/sites.jpg
 description: "Drupal is a powerful platform for website generation, but once you unleash it upon your institution, everything that can happen will happen. This is my guide to ensuring only the good things happen."
 ---
 
@@ -12,7 +12,7 @@ When we spun up Drupal, we created our base site configuration, our theme, a few
 
 Soon 10 Drupal sites grew to 50 sites. 50 sites grew to 200. 200 to 800. But we thought had things under control, it was after all, 800 sites under one content management system. Some had blogs, some had event calendars, some had photogalleries, but it was all pretty much the same. But as our team was left to maintain such a large environment, we realized many of those sites had different implementations of those things, making maintenance time consuming and difficult. We didn't have a web content management system we were in control of, we had a web content management *framework*. We gave that framework to our community, and our community was building individual CMSs with it. We were left not with 800 sites under one CMS, but 800 CMSs under one framework.
 
-![Many, many sites](/files/2015-09-21-drupal-distros-that-scale-part-1/sites.jpg)
+![Many, many sites](/img/drupal-blog/2015-09-21-drupal-distros-that-scale-part-1/sites.jpg)
 
 If I've lost you there, let me try to clear things up. A web content management system provides you a way to present content on web pages. It comes with all the types of content you make, like blogs, news, etc. already defined. You simply create the content. Drupal is not that (though it likes to trick you by providing a few basic types of content like pages and articles by default). Drupal is a web content management framework, you use it to build a web content management system. It gives you tools to create new types of content, editing interfaces for that content, layout systems and so on and so on - basically all the stuff you don't want your users playing around with. Because if they do, they will come up with every permutation and combination of Drupal they can make. You can imagine the headache when your environment has grown to 800 sites that behave differently, and you're expected to maintain it.
 

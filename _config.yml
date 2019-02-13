@@ -1,9 +1,17 @@
 # Site settings
-title: Derek McBurney
-description: I'm Derek. I make web.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://derekmcburney.com" # the base hostname & protocol for your site
-permalink: /blog/:title
+baseurl: ""
+url: "http://derekmcburney.com"
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .idea
+  - package-lock.json
+  - package.json
 
 # Build settings
 markdown: kramdown
@@ -21,4 +29,4 @@ defaults:
       path: ""
       type: drupal-blog-posts
     values:
-      layout: drupal-blog-post
+      layout: blog-post
