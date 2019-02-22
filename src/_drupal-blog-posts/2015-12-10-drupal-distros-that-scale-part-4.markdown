@@ -1,6 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 4: Crafting Great Features"
-image: /img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_content_editing.gif
+image: /assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_content_editing.gif
 description: "How can your Drupal functionality be flexible enough for your site admins to get what they need out of it, while being general enough that it exists as one module you can maintain?"
 ---
 
@@ -77,25 +77,25 @@ Or, are there some tricks we can use to generalize our feature module to handle 
 
 Let's build out our news content type. In order to accomodate both **Site 1** and **Site 2**'s requirements, we need to add all fields needed by both:
 
-![Fields](/img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_fields.png)
+![Fields](/assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_fields.png)
 
 This results in a clunky user experience for **Site 2**, as **Site 2** doesn't need fields for authors. But in order to server both sites with the same feature, we need to include all fields. But there is an option for making a better content editing experience, [Conditional Fields](https://www.drupal.org/project/conditional_fields). We can add an 'Add Author' list field with two options, yes or no, to our content type. We can then add a field dependency through Conditional Fields to show (or even require) the Author fields based on what is selected for the 'Add Author' field. As this field is only used to internally to manage this content type, make sure to hide it in the 'Manage Display' section of the content type.
 
-![Conditional fields](/img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_conditional_fields.png)
+![Conditional fields](/assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_conditional_fields.png)
 
 Now **Site 1** can have its author fields, and **Site 2** doesn't need an overly complicated editing interface:
 
-![Editing the content type](/img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_content_editing.gif)
+![Editing the content type](/assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_content_editing.gif)
 
 ### Taxonomies
 
 Let's create our view that shows all news:
 
-![View](/img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_view.png)
+![View](/assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_view.png)
 
 **Site 2** needs a view that shows only events. We could add a new display mode with a filter on the event tag. But what if **Site 2** wants their news view to now only show Press Releases, and then Sites 3 through 48 come online and want to filter on new tags you hadn't even thought of (afterall, tags are content and Administrators are fully expected to build out taxonomies relevant to their sites' needs). It's not sustainable for us to keep adding display modes to our view. Instead we can use the power of contextual filters with taxonomies. A contextual filter can allow the taxonomy term for the view to filter against to be passed via the URL:
 
-![Contextual filter](/img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_contextual_filter.png)
+![Contextual filter](/assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_contextual_filter.png)
 
 This allows us to keep one view with one display mode and handle filtering against all types of taxonomy terms. When no term is supplied, all news is shown. **Site 1** can have a menu item to the news list at /news-list. **Site 2** can have a menu item to their news list point to /news-list/event so they can show only events. Sites 3 through 48 can do whatever they need to do with the flexibility we've now built into our feature.
 
@@ -103,7 +103,7 @@ This allows us to keep one view with one display mode and handle filtering again
 
 The final piece of our example is for **Site 2** to render news that is tagged 'Press Release' differently. Though there's probably some module somewhere to do this, we can quickly achieve this in code. Our functionality belongs in code anyway, so using Features, we can check off the items we need to generate module code:
 
-![Building a feature](/img/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_feature.png)
+![Building a feature](/assets/drupal-blog/2015-12-10-drupal-distros-that-scale-part-4/news_feature.png)
 
 Once we have generated the feature to code, we can open up the generated `.module` file and add a [node preprocess hook](https://api.drupal.org/api/drupal/modules%21node%21node.module/function/template_preprocess_node/7) that will add a CSS file (or do whatever logic you'd like to dream up).
 

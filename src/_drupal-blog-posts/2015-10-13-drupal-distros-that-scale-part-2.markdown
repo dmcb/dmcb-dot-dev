@@ -1,12 +1,12 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 2: Site Deployment"
-image: /img/drupal-blog/2015-10-13-drupal-distros-that-scale-part-2/coding.gif
+image: /assets/drupal-blog/2015-10-13-drupal-distros-that-scale-part-2/coding.gif
 description: "So it's time for you to build your Drupal CMS. You install Drupal, generate your new site and log in. After checking off about forty-thousand config options, you're done. You have a site. Now launch your next dozen sites."
 ---
 
 So it's time for you to build your take on Drupal. You install Drupal, generate your new site and log in. Time to check off what you want for your site. Clean URLs? Yes please. Overlay? No thanks. Download and install the views module? Of course. Alright, after this and about forty-thousand other changes, you're done. You have a blank site in your new CMS, powered by Drupal. Now launch your second site. Okay, **annoying**, but you'll do all the same clicks and get it done. Alright, done. You *probably* got all the settings the same. Now launch your next dozen sites this way.
 
-![Many, many sites](/img/drupal-blog/2015-10-13-drupal-distros-that-scale-part-2/coding.gif)
+![Many, many sites](/assets/drupal-blog/2015-10-13-drupal-distros-that-scale-part-2/coding.gif)
 
 Okay, this needs to be automated. Badly.
 
@@ -209,7 +209,7 @@ The alternative to putting together a Drupal distribution and all its files, is 
 	      type: "git"
 	      url: "git://git.drupal.org/sandbox/chrishks/2094111.git"
 	    patch:
-	      - "http://www.drupal.org/img/drupal-blog/issues/pmp-access-and-edit-any-page-2577165-6.patch"
+	      - "http://www.drupal.org/assets/drupal-blog/issues/pmp-access-and-edit-any-page-2577165-6.patch"
 	  #ucalgary
 	  ucalgary_call_to_action:
 	    subdir: "ucalgary"

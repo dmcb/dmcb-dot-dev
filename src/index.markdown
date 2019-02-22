@@ -2,7 +2,14 @@
 layout: default
 ---
   <section id="page">
-    <div class="background"></div>
+    <video class="background background-narrow" autoplay loop muted playsinline>
+      <source src="assets/me-and-the-kid.webm" type="video/webm">
+      <source src="assets/me-and-the-kid.mp4" type="video/mp4">
+    </video>
+    <video class="background background-wide" autoplay loop muted playsinline>
+      <source src="assets/me-and-the-kids.webm" type="video/webm">
+      <source src="assets/me-and-the-kids.mp4" type="video/mp4">
+    </video>
     <div class="content">
       <h1>Derek McBurney</h1>
       <ul>

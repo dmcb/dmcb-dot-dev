@@ -1,6 +1,6 @@
 ---
 title: "Creating A Drupal Distro That Scales - Part 3: Locking It Down"
-image: /img/drupal-blog/2015-11-12-drupal-distros-that-scale-part-3/admin_permissions.png
+image: /assets/drupal-blog/2015-11-12-drupal-distros-that-scale-part-3/admin_permissions.png
 description: "There's only one thing that can stop your organization's site admins from altering your Drupal CMS into every permutation and combination possible: permissions."
 ---
 
@@ -19,7 +19,7 @@ When you first log into your site after creation, you'll notice you have access 
 
 With user one under your firm control, create your first Administrator and log in with that account. Even without being user one, by default the Administrator has access to pretty much everything.
 
-![Administrator permissions](/img/drupal-blog/2015-11-12-drupal-distros-that-scale-part-3/admin_permissions.png)
+![Administrator permissions](/assets/drupal-blog/2015-11-12-drupal-distros-that-scale-part-3/admin_permissions.png)
 
 This is what Drupal believes an Administrator should be able to access by default, and it is technically *possible* that it ends up being what you will want your Administrators to access as well. But you need to be absolutely certain of what you are letting your users access. Knowing what your users are able to do ensures you know how your sites will evolve over time. If you leave user access open to something you didn’t intend, the results may be disastrous. If you have a feature module that contains some views that are standard across your sites and your users have permission to modify those views, you will come into conflict when you update those views across your sites later as you may override new settings that your admins have decided to use.
 
@@ -34,7 +34,7 @@ The best way to know with certainty what your users have access to? **Turn off a
 
 It may look like there are too many permissions in Drupal to deal with, but once you commit to the workflow above and add permissions as you need them for your users, you’ll notice Drupal actually suffers from the opposite problem - permissions aren't granular enough. Take for example `Administer site configuration`. I need to grant this permission to my site admins so they can set the name of their site, and possibly put their site in to maintenance mode. But look at all the other stuff that comes along for the ride when I enable the permission for the Administrator role:
 
-![Configuration](/img/drupal-blog/2015-11-12-drupal-distros-that-scale-part-3/configuration.png)
+![Configuration](/assets/drupal-blog/2015-11-12-drupal-distros-that-scale-part-3/configuration.png)
 
 File system? Image toolkit? Page caching? I don't want my site admins seeing this stuff, or worse yet, changing it. While many of your site admins will be too scared to touch things they don't understand, many still will dabble into these areas, or more likely, pay for an outside consultant to touch all these areas to build something custom without you being involved or even aware. Fortunately the Drupal community recognizes that modules aren't granular enough and there are many modules out there to add more specialized permissions.
 
