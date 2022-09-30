@@ -1,11 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "darkcyan-lemur"
-  },
-  "api": {
-    "projectId": "t71u3cfy",
-    "dataset": "production"
+    "name": "dmcb-dot-dev"
   },
   "plugins": [
     "@sanity/base",

@@ -1,0 +1,37 @@
+services:
+  web:
+    image: 'node:16.14-bullseye'
+    command: 'bash -c "yarn install && yarn dev"'
+    ports:
+      - '3000:3000'
+    working_dir: '/nextjs-sanity/'
+    expose:
+      - '3000'
+    volumes:
+      - './web:/nextjs-sanity/'
+      - 'node_modules:/nextjs-sanity/node_modules'
+      - 'next_build_results:/nextjs-sanity/.next'
+    restart: 'on-failure'
+    env_file:
+      - '.env.web'
+    environment:
+      - NEXT_TELEMETRY_DISABLED=1
+    depends_on:
+      - 'cms'
+  cms:
+    image: 'node:16.14-bullseye'
+    working_dir: '/nextjs-sanity/'
+    command: 'bash -c "yarn install && $$(yarn bin sanity) start --host=0.0.0.0"'
+    ports:
+      - '3333:3333'
+    expose:
+      - '3333'
+    volumes:
+      - './sanity:/nextjs-sanity/'
+      - 'sanity_node_modules:/nextjs-sanity/node_modules'
+    env_file:
+      - '.env.cms'
+volumes:
+  next_build_results:
+  node_modules:
+  sanity_node_modules:

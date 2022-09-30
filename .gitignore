@@ -1,3 +1,5 @@
+node_modules
 .config
 .npm
-node_modules
+.env.web
+.env.cms
