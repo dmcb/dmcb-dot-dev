@@ -1,5 +1,5 @@
 {
-  "name": "derekmcburney-dot-com",
+  "name": "dmcb-dot-dev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,8 @@
     "next": "12.3.0",
     "next-sanity": "^0.8.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "eslint": "8.23.1",
