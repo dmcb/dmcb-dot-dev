@@ -16,9 +16,18 @@ export default function Home({ siteSettings }) {
       <main>
         <section class="about">
           <div class="wrapper">
-            <h1>I&apos;m Derek McBurney</h1>
-            <p>, currently Head of Technology at <a href="https://www.evanshunt.com/">Evans Hunt</a>.</p>
-            <p>I&apos;ve been a web geek forever. I care about inclusive and positive developer culture, and I love meaningful technology.</p>
+            <div class="profile">
+              {siteSettings[0].portrait &&
+              <div class="portrait">
+                <img src={siteSettings[0].portraitUrl} alt={siteSettings[0].portrait.alt} />
+              </div>
+              }
+              <div class="inline">
+                <h1>I&apos;m Derek McBurney</h1>
+                <p>, Head of Technology at <a href="https://www.evanshunt.com/">Evans Hunt</a>.</p>
+              </div>
+            </div>
+            <p>I&apos;ve been a web geek forever. I care about inclusive and positive developer culture, and I love meaningful technology experiences.</p>
           </div>
         </section>
       </main>
@@ -37,7 +46,11 @@ const client = createClient({
 });
 
 export async function getStaticProps() {
-  const siteSettings = await client.fetch(`*[_type == "siteSettings"]`);
+  const siteSettings = await client.fetch(`*[_type == "siteSettings"]{
+    title,
+    portrait,
+    "portraitUrl": portrait.asset->url
+  }`);
 
   return {
     props: {

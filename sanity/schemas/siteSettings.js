@@ -7,6 +7,18 @@ export default {
         name: 'title',
         type: 'string',
         title: 'Site Title'
+      },
+      {
+        name: 'portrait',
+        type: 'image',
+        title: 'Portrait',
+        fields: [
+          {
+            name: 'alt',
+            type: 'string',
+            title: 'Alt text'
+          }
+        ]
       }
   ]
 }
