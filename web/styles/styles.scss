@@ -11,6 +11,11 @@ body {
   @media only screen and (min-width: 1200px){
     font-size: 24px;
   }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #000;
+    color: #999;
+  }
 }
 
 a {
@@ -23,11 +28,15 @@ a {
 
 section.banner {
   display: block;
-  background-image: url('/battlestation.png');
+  background-image: url('/battlestation.webp');
   background-size: cover;
   background-position: bottom center;
   height: 60vh;
   width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background-image: url('/battlestation-dark.webp');
+  }
 }
 
 section.about {
@@ -58,6 +67,10 @@ div.wrapper {
 h1, strong {
   font-size: 1em;
   color: #000;
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+  }
 }
 
 div.profile {
