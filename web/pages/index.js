@@ -26,6 +26,9 @@ export default function Home({ siteSettings }) {
                 <Link href='https://medium.com/@d.mcburney'>Writing</Link>
               </li>
               <li>
+                <Link href='https://www.linkedin.com/in/derekmcburney/'>LinkedIn</Link>
+              </li>
+              <li>
                 <Link href='https://github.com/dmcb'>GitHub</Link>
               </li>
             </ul>
