@@ -1,3 +1,8 @@
+* {
+  transform: translate3d(0,0,0);
+  z-index: 1;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: #555;
@@ -5,10 +10,14 @@ body {
   font-weight: 600;
 
   @media only screen and (min-width: 720px){
-    font-size: 20px;
+    font-size: 18px;
   }
 
   @media only screen and (min-width: 1200px){
+    font-size: 21px;
+  }
+
+  @media only screen and (min-width: 1600px){
     font-size: 24px;
   }
 
@@ -20,9 +29,158 @@ body {
 
 a {
   color: #BD41A6;
+  transition: color 0.3s;
 
-  &:hover, &:active {
+  &:active, &:focus, &:hover {
     color: #8628B5;
+  }
+}
+
+nav {
+  transition: transform 0.3s;
+  transform: translateY(calc(-100% + 3em));
+  padding: 1em 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-weight: 400;
+  background-color: #000;
+  font-size: 1rem;
+
+  a {
+    text-decoration: none;
+    color: #999;
+
+    &:active, &:focus, &:hover {
+      color: #fff;
+    }
+
+    &.skip {
+      position: absolute;
+      top: -1000px;
+      left: -1000px;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      display: block;
+      margin-bottom: 1em;
+
+      &:active, &:focus, &:hover {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+      }
+    }
+  }
+
+  ul {  
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+    transform: translateY(-2em);
+    
+    li {
+      display: block;
+      margin-bottom: 1em;
+
+      &.active a {
+        color: #fff;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #toggle-nav {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    bottom: -0.25em;
+    right: 0;
+    width: 2em;
+    height: 1.5em;
+    cursor: pointer;
+
+    div {
+      display: block;
+      position: absolute;
+      height: 0.25em;
+      width: 100%;
+      background: #fff;
+      border-radius: 0.25em;
+      opacity: 1;
+      left: 0;
+      transition: all 0.3s;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        top: calc(50% - 0.125em)
+      }
+
+      &:nth-child(4) {
+        top: calc(100% - 0.25em)
+      }
+    }
+  }
+
+  &.open {
+    transform: translateY(0);
+
+    ul {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #toggle-nav div {
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(1), &:nth-child(4) {
+        top: calc(50% - 0.125em);
+        width: 0%;
+        left: 50%;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 720px){
+    padding: 0.325em 0;
+    transform: none;
+
+    a.skip {
+      margin-bottom: 0;
+    }
+
+    ul {
+      transform: translateY(0);
+      opacity: 1;
+
+      li {
+        display: inline;
+        padding: 0;
+        margin: 0 2em 0 0;
+      }
+    }
+
+    #toggle-nav {
+      display: none;
+    }
   }
 }
 
@@ -31,11 +189,19 @@ section.banner {
   background-image: url('/battlestation.webp');
   background-size: cover;
   background-position: bottom center;
-  height: 60vh;
+  max-height: 40vh;
+  height: 240px;
   width: 100%;
 
   @media (prefers-color-scheme: dark) {
     background-image: url('/battlestation-dark.webp');
+  }
+}
+
+header.index {
+  section.banner {
+    height: 60vh;
+    max-height: none;
   }
 }
 
@@ -51,6 +217,7 @@ section.about {
 }
 
 div.wrapper {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-width: calc(100% - 4em);
@@ -60,7 +227,11 @@ div.wrapper {
   }
 
   @media only screen and (min-width: 1200px){
-    max-width: 900px;
+    max-width: 800px;
+  }
+
+  @media only screen and (min-width: 1600px){
+    max-width: 960px;
   }
 }
 
