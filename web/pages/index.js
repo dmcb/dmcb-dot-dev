@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { createClient } from "next-sanity";
+const { fetchSiteSettings } = require("../utility/cms");
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Link from 'next/link'
@@ -11,7 +11,7 @@ export default function Home({ siteSettings }) {
   return (
     <>
       <Head>
-        <title>{siteSettings[0].title}</title>
+        <title>{siteSettings.title}</title>
       </Head>
 
       <header className="index" onFocus={() => setNavExpanded(true)} onBlur={() => setNavExpanded(false)}>
@@ -32,7 +32,7 @@ export default function Home({ siteSettings }) {
                 <Link href='https://github.com/dmcb'>GitHub</Link>
               </li>
             </ul>
-            <button onClick={() => setNavExpanded(!navExpanded)} id="toggle-nav" aria-hidden="true" tabindex="-1">
+            <button onClick={() => setNavExpanded(!navExpanded)} id="toggle-nav" aria-hidden="true" tabIndex="-1">
               <div></div>
               <div></div>
               <div></div>
@@ -48,9 +48,9 @@ export default function Home({ siteSettings }) {
         <section className="about">
           <div className="wrapper">
             <div className="profile">
-              {siteSettings[0].portrait &&
+              {siteSettings.portrait &&
               <div className="portrait">
-                <img src={siteSettings[0].portraitUrl} alt={siteSettings[0].portrait.alt} />
+                <img src={siteSettings.portraitUrl} alt={siteSettings.portrait.alt} />
               </div>
               }
               <div className="inline">
@@ -69,19 +69,8 @@ export default function Home({ siteSettings }) {
   )
 }
 
-const client = createClient({
-  projectId: "t71u3cfy",
-  dataset: "production",
-  apiVersion: "2022-03-25",
-  useCdn: false
-});
-
 export async function getStaticProps() {
-  const siteSettings = await client.fetch(`*[_type == "siteSettings"]{
-    title,
-    portrait,
-    "portraitUrl": portrait.asset->url
-  }`);
+  const siteSettings = await fetchSiteSettings();
 
   return {
     props: {
