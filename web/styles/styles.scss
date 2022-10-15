@@ -1,3 +1,8 @@
+* {
+  transform: translate3d(0,0,0);
+  z-index: 1;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: #555;
@@ -43,11 +48,6 @@ nav {
   background-color: #000;
   font-size: 1rem;
 
-  .wrapper {
-    transition: padding-bottom 0.3s;  
-    padding-bottom: 2em;
-  }
-
   a {
     text-decoration: none;
     color: #999;
@@ -76,8 +76,11 @@ nav {
   }
 
   ul {  
+    opacity: 0;
     margin: 0;
     padding: 0;
+    transition: all 0.3s;
+    transform: translateY(-2em);
     
     li {
       display: block;
@@ -134,8 +137,9 @@ nav {
   &.open {
     transform: translateY(0);
 
-    .wrapper {
-      padding-bottom: 0;
+    ul {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     #toggle-nav div {
@@ -157,25 +161,21 @@ nav {
 
   @media only screen and (min-width: 720px){
     padding: 0.325em 0;
+    transform: none;
 
     a.skip {
       margin-bottom: 0;
     }
 
-    .wrapper {
-      padding: 0;
-    }
-
     ul {
+      transform: translateY(0);
+      opacity: 1;
+
       li {
         display: inline;
         padding: 0;
         margin: 0 2em 0 0;
       }
-    }
-
-    &.closed {
-      transform: none;
     }
 
     #toggle-nav {
