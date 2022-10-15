@@ -22,6 +22,9 @@ export default function Home({ siteSettings }) {
               <li className={router.pathname == "/" ? "active" : ""}>
                 <Link href='/'>About Me</Link>
               </li>
+              <li className={router.pathname == "/on-tap" ? "active" : ""}>
+                <Link href='/on-tap'>What's On Tap</Link>
+              </li>
               <li>
                 <Link href='https://medium.com/@d.mcburney'>Writing</Link>
               </li>
