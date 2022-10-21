@@ -7,7 +7,7 @@ body {
   font-family: 'Nunito', sans-serif;
   color: #555;
   line-height: 1.4em;
-  font-weight: 600;
+  font-weight: 400;
 
   @media only screen and (min-width: 720px){
     font-size: 18px;
@@ -186,7 +186,7 @@ nav {
   }
 }
 
-section.banner {
+div.banner {
   display: block;
   background-image: url('/battlestation.webp');
   background-size: cover;
@@ -201,15 +201,18 @@ section.banner {
 }
 
 header.index {
-  section.banner {
+  div.banner {
     height: 60vh;
   }
 }
 
+section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
 section.about {
   div.wrapper {
-    padding-top: 2em;
-    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,6 +240,7 @@ div.wrapper {
 
 h1, strong {
   font-size: 1em;
+  font-weight: 600;
   color: #000;
 
   @media (prefers-color-scheme: dark) {

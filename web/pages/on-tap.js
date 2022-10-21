@@ -5,7 +5,7 @@ export default function Page({ siteSettings }) {
   return (
     <>
       <main id="content">
-        <section class="content">
+        <section class="on-tap">
           <div class="wrapper">
             <h1>What's On Tap</h1>
           </div>

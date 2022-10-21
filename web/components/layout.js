@@ -42,8 +42,8 @@ const Layout = (props) => {
             </button>
           </div>
         </nav>
-        <section className="banner">
-        </section>
+        <div className="banner">
+        </div>
       </header>
 
       <main id="content">{props.children}</main>
