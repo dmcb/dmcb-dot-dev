@@ -191,9 +191,9 @@ section.banner {
   background-image: url('/battlestation.webp');
   background-size: cover;
   background-position: bottom center;
-  max-height: 36vh;
-  height: 360px;
+  height: 36vh;
   width: 100%;
+  transition: all 0.3s;
 
   @media (prefers-color-scheme: dark) {
     background-image: url('/battlestation-dark.webp');
@@ -203,7 +203,6 @@ section.banner {
 header.index {
   section.banner {
     height: 60vh;
-    max-height: none;
   }
 }
 
@@ -213,7 +212,6 @@ section.about {
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
-    min-height: 40vh;
     justify-content: center;
   }
 }
@@ -233,7 +231,7 @@ div.wrapper {
   }
 
   @media only screen and (min-width: 1600px){
-    max-width: 960px;
+    max-width: 920px;
   }
 }
 
