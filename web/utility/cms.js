@@ -16,6 +16,15 @@ const fetchSiteSettings = async () => {
   return siteSettings[0];
 }
 
+const fetchThings = async () => {
+  const things = await client.fetch(`*[_type == "thing"]{
+    image,
+    "imageUrl": image.asset->url
+  }`);
+  return things;
+}
+
 module.exports = {
-  fetchSiteSettings
+  fetchSiteSettings,
+  fetchThings
 }

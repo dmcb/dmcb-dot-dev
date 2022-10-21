@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Thing from '../components/thing'
-const { fetchSiteSettings } = require("../utility/cms");
+const { fetchSiteSettings, fetchThings } = require("../utility/cms");
 export default function Page({ things }) {
   return (
     <>
@@ -28,25 +28,8 @@ Page.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps() {
-  const siteSettings = await fetchSiteSettings();
-  const things = [
-    { 
-      type: 'Board Game',
-      imageUrl: 'https://cdn.shopify.com/s/files/1/0417/9964/7393/products/FFGMC32-Marvel-Champions-Mutant-Genesis_300x300.png?v=1664377472',
-      imageAlt: 'Marvel Champions: Mutant Genesis'
-    },
-    { 
-      type: 'Board Game',
-      imageUrl: 'https://cdn.shopify.com/s/files/1/0417/9964/7393/products/FFGMC32-Marvel-Champions-Mutant-Genesis_300x300.png?v=1664377472',
-      imageAlt: 'Marvel Champions: Mutant Genesis'
-    },
-    { 
-      type: 'Board Game',
-      imageUrl: 'https://cdn.shopify.com/s/files/1/0417/9964/7393/products/FFGMC32-Marvel-Champions-Mutant-Genesis_300x300.png?v=1664377472',
-      imageAlt: 'Marvel Champions: Mutant Genesis'
-    },
-
-  ]
+  const siteSettings = await fetchSiteSettings()
+  const things = await fetchThings()
 
   return {
     props: {

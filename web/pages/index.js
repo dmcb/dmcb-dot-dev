@@ -9,7 +9,7 @@ export default function Page({ siteSettings }) {
           <div className="profile">
             {siteSettings.portrait &&
             <div className="portrait">
-              <img src={siteSettings.portraitUrl} alt={siteSettings.portrait.alt} />
+              <img src={siteSettings.portraitUrl + "?fm=webp&w=216"} alt={siteSettings.portrait.alt} />
             </div>
             }
             <div className="inline">
