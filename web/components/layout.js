@@ -19,19 +19,29 @@ const Layout = (props) => {
             <a href="#content" className="skip">Skip Navigation</a>
             <ul>
               <li className={router.pathname == "/" ? "active" : ""}>
-                <Link href='/'>About Me</Link>
+                <Link href='/'>
+                  <a onClick={() => setNavExpanded(false)}>About Me</a>
+                </Link>
               </li>
               <li className={router.pathname == "/on-tap" ? "active" : ""}>
-                <Link href='/on-tap'>What's On Tap</Link>
+                <Link href='/on-tap'>
+                  <a onClick={() => setNavExpanded(false)}>What's On Tap</a>
+                </Link>
               </li>
               <li>
-                <Link href='https://medium.com/@d.mcburney'>Writing</Link>
+                <Link href='https://medium.com/@d.mcburney'>
+                  <a onClick={() => setNavExpanded(false)}>Writing</a>
+                </Link>
               </li>
               <li>
-                <Link href='https://www.linkedin.com/in/derekmcburney/'>LinkedIn</Link>
+                <Link href='https://www.linkedin.com/in/derekmcburney/'>
+                  <a onClick={() => setNavExpanded(false)}>LinkedIn</a>
+                </Link>
               </li>
               <li>
-                <Link href='https://github.com/dmcb'>GitHub</Link>
+                <Link href='https://github.com/dmcb'>
+                  <a onClick={() => setNavExpanded(false)}>GitHub</a>
+                </Link>
               </li>
             </ul>
             <button onClick={() => setNavExpanded(!navExpanded)} id="toggle-nav" aria-hidden="true" tabIndex="-1">
