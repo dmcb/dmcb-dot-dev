@@ -193,10 +193,15 @@ div.banner {
   background-position: bottom center;
   height: 36vh;
   width: 100%;
-  transition: all 0.3s;
+  transition: height 0.3s;
 
   @media (prefers-color-scheme: dark) {
     background-image: url('/battlestation-dark.webp');
+  }
+
+
+  @media (prefers-reduced-motion) {
+    transition: none;
   }
 }
 
