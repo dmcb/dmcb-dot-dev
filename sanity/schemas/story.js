@@ -3,10 +3,10 @@ export default {
   type: 'document',
   title: 'Story',
   fields: [
-      {
-        name: 'title',
-        type: 'string',
-        title: 'Title'
-      }
+    {
+      name: 'title',
+      type: 'string',
+      title: 'Title'
+    }
   ]
 }
