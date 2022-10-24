@@ -23,9 +23,14 @@ const Layout = (props) => {
                   <a onClick={() => setNavExpanded(false)}>About Me</a>
                 </Link>
               </li>
-              <li className={router.pathname == "/on-tap" ? "active" : ""}>
+              {/* <li className={router.pathname == "/on-tap" ? "active" : ""}>
                 <Link href='/on-tap'>
                   <a onClick={() => setNavExpanded(false)}>What's On Tap</a>
+                </Link>
+              </li> */}
+              <li className={router.pathname == "/projects" ? "active" : ""}>
+                <Link href='/projects'>
+                  <a onClick={() => setNavExpanded(false)}>Projects</a>
                 </Link>
               </li>
               <li>
