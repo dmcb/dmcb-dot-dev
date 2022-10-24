@@ -6,8 +6,8 @@ export default function Page({ things }) {
     <>
       <section className="on-tap">
         <div className="wrapper">
-          <h1>What's On Tap</h1>
-          <p>The stuff I'm into at the moment.</p>
+          <h1>What&apos;s On Tap</h1>
+          <p>The stuff I&apos;m into at the moment.</p>
           <ul className="things">
             {things.map((thing, i) => {
               return <Thing {...thing} key={i} />
