@@ -48,6 +48,11 @@ const Layout = (props) => {
                   <a onClick={() => setNavExpanded(false)}>GitHub</a>
                 </Link>
               </li>
+              <li>
+                <Link href='https://calendly.com/d-mcburney/office-hours'>
+                  <a onClick={() => setNavExpanded(false)}>Office Hours</a>
+                </Link>
+              </li>
             </ul>
             <button onClick={() => setNavExpanded(!navExpanded)} id="toggle-nav" aria-hidden="true" tabIndex="-1">
               <div></div>
