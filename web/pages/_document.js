@@ -5,10 +5,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/icon.png" type="image/png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" /> 
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,400&display=swap" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
         </Head>
         <body>
