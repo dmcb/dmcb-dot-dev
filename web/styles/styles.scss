@@ -77,13 +77,26 @@ nav {
     }
 
     svg {
+      transition: all 0.3s;
       fill: #999;
-      transition: 0.3s fill;
+      color: #999;
       height: 2em;
+
+      path {
+        transition: all 0.3s;
+        fill: #999;
+        color: #999;
+      }
     }
 
     &:active svg, &:focus svg, &:hover svg {
       fill: #fff;
+      color: #fff;
+
+      path {
+        fill: #fff;
+        color: #fff;
+      }
     }
   }
 
