@@ -34,7 +34,7 @@ const Layout = (props) => {
                 </Link>
               </li>
               <li>
-                <Link href='https://medium.com/@d.mcburney'>
+                <Link href='https://dmcbdev.substack.com'>
                   <a onClick={() => setNavExpanded(false)}>Writing</a>
                 </Link>
               </li>
