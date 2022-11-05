@@ -28,11 +28,11 @@ const Layout = (props) => {
                   <a onClick={() => setNavExpanded(false)}>What's On Tap</a>
                 </Link>
               </li> */}
-              <li className={router.pathname == "/projects" ? "active" : ""}>
+              {/* <li className={router.pathname == "/projects" ? "active" : ""}>
                 <Link href='/projects'>
                   <a onClick={() => setNavExpanded(false)}>Projects</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='https://dmcbdev.substack.com'>
                   <a onClick={() => setNavExpanded(false)}>Writing</a>
