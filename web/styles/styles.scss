@@ -1,13 +1,15 @@
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */*,::after,::before{box-sizing:border-box}html{-moz-tab-size:4;tab-size:4}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}hr{height:0;color:inherit}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}::-moz-focus-inner{border-style:none;padding:0}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+
 * {
   transform: translate3d(0,0,0);
   z-index: 1;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
   color: #555;
   line-height: 1.4em;
-  font-weight: 400;
+  font-weight: 300;
 
   @media only screen and (min-width: 720px){
     font-size: 18px;
@@ -28,7 +30,7 @@ body {
 }
 
 a {
-  font-weight: 600;
+  font-weight: 500;
   color: #BD41A6;
   transition: color 0.3s;
 
@@ -45,7 +47,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #000;
   font-size: 1.25rem;
 
@@ -269,7 +271,7 @@ div.banner {
 
 header.index {
   div.banner {
-    height: 60vh;
+    height: 52vh;
   }
 }
 
@@ -303,7 +305,7 @@ div.wrapper {
 
 h1, h2, strong {
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 500;
   color: #000;
 
   @media (prefers-color-scheme: dark) {
