@@ -6,6 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/icon.png" type="image/png" />
+          <meta property="og:image" content="/battlestation.webp" />
         </Head>
         <body>
           <Main />
