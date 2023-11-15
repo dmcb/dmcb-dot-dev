@@ -1,25 +1,139 @@
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */*,::after,::before{box-sizing:border-box}html{-moz-tab-size:4;tab-size:4}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}hr{height:0;color:inherit}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}::-moz-focus-inner{border-style:none;padding:0}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+hr {
+  height: 0;
+  color: inherit;
+}
+abbr[title] {
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+legend {
+  padding: 0;
+}
+progress {
+  vertical-align: baseline;
+}
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+summary {
+  display: list-item;
+}
 
 * {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   z-index: 1;
 }
 
 body {
-  font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  font-family: Avenir, "Avenir Next LT Pro", Montserrat, Corbel, "URW Gothic",
+    source-sans-pro, sans-serif;
   color: #555;
   line-height: 1.4em;
   font-weight: 400;
 
-  @media only screen and (min-width: 720px){
+  @media only screen and (min-width: 720px) {
     font-size: 18px;
   }
 
-  @media only screen and (min-width: 1200px){
+  @media only screen and (min-width: 1200px) {
     font-size: 21px;
   }
 
-  @media only screen and (min-width: 1600px){
+  @media only screen and (min-width: 1600px) {
     font-size: 24px;
   }
 
@@ -31,18 +145,20 @@ body {
 
 a {
   font-weight: 500;
-  color: #BD41A6;
+  color: #bd41a6;
   transition: color 0.3s;
 
-  &:active, &:focus, &:hover {
-    color: #8628B5;
+  &:active,
+  &:focus,
+  &:hover {
+    color: #8628b5;
   }
 }
 
 nav {
   transition: transform 0.3s;
   transform: translateY(calc(-100% + 3em));
-  padding: 1em 0;
+  padding: 0.5em 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -55,7 +171,9 @@ nav {
     text-decoration: none;
     color: #999;
 
-    &:active, &:focus, &:hover {
+    &:active,
+    &:focus,
+    &:hover {
       color: #fff;
     }
 
@@ -69,7 +187,9 @@ nav {
       display: block;
       margin-bottom: 1em;
 
-      &:active, &:focus, &:hover {
+      &:active,
+      &:focus,
+      &:hover {
         position: static;
         width: auto;
         height: auto;
@@ -82,7 +202,7 @@ nav {
       transition: all 0.3s;
       fill: #999;
       color: #999;
-      height: 2em;
+      height: 1.5em;
 
       path {
         transition: all 0.3s;
@@ -91,7 +211,9 @@ nav {
       }
     }
 
-    &:active svg, &:focus svg, &:hover svg {
+    &:active svg,
+    &:focus svg,
+    &:hover svg {
       fill: #fff;
       color: #fff;
 
@@ -102,13 +224,13 @@ nav {
     }
   }
 
-  ul {  
+  ul {
     opacity: 0;
     margin: 0;
     padding: 0;
     transition: all 0.3s;
     transform: translateY(-2em);
-    
+
     li {
       display: block;
       margin-bottom: 1em;
@@ -140,7 +262,7 @@ nav {
     padding: 0;
     border: 0;
     position: absolute;
-    bottom: -0.25em;
+    bottom: 0.25em;
     right: 0;
     width: 2em;
     height: 1.5em;
@@ -161,12 +283,13 @@ nav {
         top: 0;
       }
 
-      &:nth-child(2), &:nth-child(3) {
-        top: calc(50% - 0.125em)
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: calc(50% - 0.125em);
       }
 
       &:nth-child(4) {
-        top: calc(100% - 0.25em)
+        top: calc(100% - 0.25em);
       }
     }
   }
@@ -184,7 +307,8 @@ nav {
         transform: rotate(45deg);
       }
 
-      &:nth-child(1), &:nth-child(4) {
+      &:nth-child(1),
+      &:nth-child(4) {
         top: calc(50% - 0.125em);
         width: 0%;
         left: 50%;
@@ -196,7 +320,7 @@ nav {
     }
   }
 
-  @media only screen and (min-width: 720px){
+  @media only screen and (min-width: 720px) {
     font-size: 1rem;
     padding: 0.75rem 0;
     transform: none;
@@ -252,7 +376,7 @@ nav {
 
 div.banner {
   display: block;
-  background-image: url('/battlestation.webp');
+  background-image: url("/battlestation.webp");
   background-size: cover;
   background-position: bottom center;
   height: 36vh;
@@ -260,9 +384,8 @@ div.banner {
   transition: height 0.3s;
 
   @media (prefers-color-scheme: dark) {
-    background-image: url('/battlestation-dark.webp');
+    background-image: url("/battlestation-dark.webp");
   }
-
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -286,24 +409,26 @@ div.wrapper {
   margin-right: auto;
   max-width: calc(100% - 4rem);
 
-  @media only screen and (min-width: 480px){
+  @media only screen and (min-width: 480px) {
     max-width: 380px;
   }
 
-  @media only screen and (min-width: 720px){
+  @media only screen and (min-width: 720px) {
     max-width: 640px;
   }
 
-  @media only screen and (min-width: 1200px){
+  @media only screen and (min-width: 1200px) {
     max-width: 800px;
   }
 
-  @media only screen and (min-width: 1600px){
+  @media only screen and (min-width: 1600px) {
     max-width: 920px;
   }
 }
 
-h1, h2, strong {
+h1,
+h2,
+strong {
   font-size: 1em;
   font-weight: 500;
   color: #000;
@@ -319,7 +444,8 @@ div.profile {
 }
 
 div.inline {
-  h1, h1 + p {
+  h1,
+  h1 + p {
     display: inline;
   }
 }
@@ -328,7 +454,7 @@ div.portrait {
   width: 5em;
   height: 5em;
   border-radius: 100%;
-  background-color: #BD41A6;
+  background-color: #bd41a6;
   flex-shrink: 0;
   transition: transform 0.3s;
 
@@ -384,19 +510,17 @@ section.on-tap {
       margin-top: 0;
     }
   }
-  
+
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transform: scale(0.93);
-    filter: drop-shadow(8px 0 0 #BD41A6) 
-        drop-shadow(0 8px 0 #BD41A6)
-        drop-shadow(-8px 0 0 #BD41A6) 
-        drop-shadow(0 -8px 0 #BD41A6);
+    filter: drop-shadow(8px 0 0 #bd41a6) drop-shadow(0 8px 0 #bd41a6)
+      drop-shadow(-8px 0 0 #bd41a6) drop-shadow(0 -8px 0 #bd41a6);
   }
 
-  @media only screen and (min-width: 720px){
+  @media only screen and (min-width: 720px) {
     .things {
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 3em;
@@ -404,7 +528,7 @@ section.on-tap {
     }
   }
 
-  @media only screen and (min-width: 1200px){
+  @media only screen and (min-width: 1200px) {
     .things {
       column-gap: 4em;
       row-gap: 2em;
