@@ -1,10 +1,15 @@
 <script>
   import '../../node_modules/modern-normalize/modern-normalize.css';
   import { page } from '$app/stores';
-  
-  let bannerType = 'index';
+
+  export let data;
+
   let navExpanded = false;
 </script>
+
+<svelte:head>
+    <title>{data.siteSettings.title}</title> 
+</svelte:head>
 
 <style lang="scss">
     :global(*) {
@@ -382,7 +387,7 @@
 
 </style>
 
-<header class={bannerType} on:focus={() => {navExpanded = true}} on:blur={() => {navExpanded = false }}>
+<header class={$page.data.bannerType} on:focus={() => {navExpanded = true}} on:blur={() => {navExpanded = false }}>
   <nav class={navExpanded ? "open" : "closed"}>
     <div class="wrapper">
       <a href="#content" class="skip">Skip Navigation</a>
@@ -392,10 +397,10 @@
         </li>
         <!-- <li class={$page.url.pathname == "/on-tap" ? "active" : ""}>
           <a on:click={() => {navExpanded = false}} href="/on-tap">What's On Tap</a>
-        </li>
-        <li class={$page.url.pathname == "/projects" ? "active" : ""}>
-          <a on:click={() => {navExpanded = false}} href=""/projects">Projects</a>
         </li> -->
+        <li class={$page.url.pathname == "/projects" ? "active" : ""}>
+          <a on:click={() => {navExpanded = false}} href="/projects">Projects</a>
+        </li>
         <li>
           <a on:click={() => {navExpanded = false}} href="https://medium.com/@d.mcburney">Writing</a>
         </li>

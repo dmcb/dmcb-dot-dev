@@ -2,10 +2,6 @@
   export let data;
 </script>
 
-<svelte:head>
-    <title>{data.siteSettings.title}</title> 
-</svelte:head>
-
 <style lang="scss">
   div.profile {
     display: flex;
@@ -19,6 +15,7 @@
     background-color: #bd41a6;
     flex-shrink: 0;
     transition: transform 0.3s;
+    margin-right: 1em;
 
     img {
       width: 90%;
@@ -27,10 +24,7 @@
       margin-top: 5%;
       border-radius: 100%;
       padding: 0;
-    }
 
-    + * {
-      margin-left: 1em;
     }
 
     &:hover {
@@ -43,17 +37,9 @@
       }
     }
   }
-
-  section.about {
-    div.wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
 </style>
 
-<section class="about">
+<section>
   <div class="wrapper">
     <div class="profile">
       {#if data.siteSettings.portraitUrl}
