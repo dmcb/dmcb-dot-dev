@@ -9,6 +9,7 @@
 
 <svelte:head>
     <title>{data.siteSettings.title}</title> 
+    <meta name="description" content={data.siteSettings.description} />
 </svelte:head>
 
 <style lang="scss">
