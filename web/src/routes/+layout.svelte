@@ -97,7 +97,7 @@
     }
 
     nav {
-      transition: all 0.3s;
+      transition: transform 0.3s;
       transform: translateY(calc(-100% + 3em));
       padding: 0.5em 0;
       position: absolute;
@@ -140,13 +140,13 @@
         }
 
         svg {
-          transition: all 0.3s;
+          transition: fill 0.3s, color 0.3s;
           fill: #999;
           color: #999;
           height: 1.5em;
 
           path {
-            transition: all 0.3s;
+            transition: fill 0.3s, color 0.3s;
             fill: #999;
             color: #999;
           }
@@ -169,7 +169,7 @@
         opacity: 0;
         margin: 0;
         padding: 0;
-        transition: all 0.3s;
+        transition: transform 0.3s;
         transform: translateY(-2em);
 
         li {
