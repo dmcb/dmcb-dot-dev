@@ -1,37 +1,35 @@
 services:
   web:
-    image: 'node:16.14-bullseye'
-    command: 'bash -c "yarn install && yarn dev"'
+    image: "node:20.12.2"
+    command: 'bash -c "npm install && npm run dev"'
     ports:
-      - '3000:3000'
-    working_dir: '/nextjs-sanity/'
+      - "5173:5173"
+    working_dir: "/svelte-sanity/"
     expose:
-      - '3000'
+      - "5173"
     volumes:
-      - './web:/nextjs-sanity/'
-      - 'node_modules:/nextjs-sanity/node_modules'
-      - 'next_build_results:/nextjs-sanity/.next'
-    restart: 'on-failure'
+      - "./web:/svelte-sanity/"
+      - "node_modules:/svelte-sanity/node_modules"
+      - "svelte_build_results:/svelte-sanity/.svelte-kit"
+    restart: "on-failure"
     env_file:
-      - '.env.web'
-    environment:
-      - NEXT_TELEMETRY_DISABLED=1
+      - "./web/.env"
     depends_on:
-      - 'cms'
+      - "cms"
   cms:
-    image: 'node:16.14-bullseye'
-    working_dir: '/nextjs-sanity/'
+    image: "node:20.12.2"
+    working_dir: "/svelte-sanity/"
     command: 'bash -c "yarn install && $$(yarn bin sanity) start --host=0.0.0.0"'
     ports:
-      - '3333:3333'
+      - "3333:3333"
     expose:
-      - '3333'
+      - "3333"
     volumes:
-      - './sanity:/nextjs-sanity/'
-      - 'sanity_node_modules:/nextjs-sanity/node_modules'
+      - "./sanity:/svelte-sanity/"
+      - "sanity_node_modules:/svelte-sanity/node_modules"
     env_file:
-      - '.env.cms'
+      - "./sanity/.env"
 volumes:
-  next_build_results:
+  svelte_build_results:
   node_modules:
   sanity_node_modules:

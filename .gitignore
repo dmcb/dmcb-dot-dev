@@ -1,5 +1,4 @@
 node_modules
 .config
 .npm
-.env.web
-.env.cms
+.env
