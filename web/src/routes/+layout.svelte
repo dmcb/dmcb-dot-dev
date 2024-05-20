@@ -93,6 +93,18 @@
       }
     }
 
+    :global(h1) {
+      font-weight: 600;
+      font-size: 1.25em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+
+    :global(div.inline h1) {
+      font-size: 1em;
+      font-weight: 500;
+    }
+
     :global(div.inline h1), :global(div.inline h1 + p) {
       display: inline;
     }

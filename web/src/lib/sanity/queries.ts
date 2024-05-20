@@ -8,6 +8,8 @@ export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
   "portraitAlt": portrait.alt
 }`;
 
+export const projectsQuery = groq`*[_type == "projects"]`;
+
 export interface siteSettings {
 	title?: string;
 	description?: string;
