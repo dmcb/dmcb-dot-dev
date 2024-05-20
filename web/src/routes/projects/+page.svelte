@@ -8,21 +8,26 @@
   ul.projects {
     list-style: none;
     padding: 0;
+    margin-top: 2em;
 
     li {
       margin-bottom: 2em;
       margin-left: -2em;
       margin-right: -2em;
-      padding: 1em 2em;
+      padding: 1.5em 2em;
 
       border: 1px solid #ddd;
+
+      h2 {
+        margin-top: 0;
+      }
     }
   }
 
   a.button {
     display: inline-block;
     padding: 0.5em 1em;
-    margin: 0.5em 0;
+    margin-top: 0.5em;
     border: 1px solid #333;
     border-radius: 0.25em;
     background-color: #333;

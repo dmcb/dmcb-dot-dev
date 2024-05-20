@@ -30,11 +30,11 @@
       }
 
       @media only screen and (min-width: 1200px) {
-        font-size: 21px;
+        font-size: 20px;
       }
 
       @media only screen and (min-width: 1600px) {
-        font-size: 24px;
+        font-size: 22px;
       }
 
       @media (prefers-color-scheme: dark) {
