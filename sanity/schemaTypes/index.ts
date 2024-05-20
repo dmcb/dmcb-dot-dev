@@ -1,3 +1,5 @@
+import accessibleImage from './atoms/accessibleImage'
 import siteSettings from './global/siteSettings'
+import projects from './data/projects'
 
-export const schemaTypes = [siteSettings]
+export const schemaTypes = [accessibleImage, siteSettings, projects]

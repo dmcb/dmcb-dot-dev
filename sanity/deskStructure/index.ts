@@ -6,4 +6,6 @@ export const structure = (S: any) =>
         .title('Site Settings')
         .id('siteSettings')
         .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+      S.divider(),
+      S.documentTypeListItem('projects'),
     ])

@@ -18,15 +18,8 @@ export default defineType({
     }),
     defineField({
       name: 'portrait',
-      type: 'image',
+      type: 'accessibleImage',
       title: 'Portrait',
-      fields: [
-        defineField({
-          name: 'alt',
-          type: 'string',
-          title: 'Alt text',
-        }),
-      ],
     }),
   ],
 })
