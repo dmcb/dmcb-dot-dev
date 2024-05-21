@@ -6,6 +6,12 @@ export default defineType({
   title: 'Projects',
   fields: [
     defineField({
+      name: 'orderRank',
+      type: 'string',
+      title: 'Order',
+      hidden: true,
+    }),
+    defineField({
       name: 'title',
       type: 'string',
       title: 'Title',

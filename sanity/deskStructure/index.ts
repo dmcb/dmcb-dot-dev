@@ -1,4 +1,6 @@
-export const structure = (S: any) =>
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
+
+export const structure = (S: any, context: any) =>
   S.list()
     .title('Content')
     .items([
@@ -7,5 +9,5 @@ export const structure = (S: any) =>
         .id('siteSettings')
         .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
       S.divider(),
-      S.documentTypeListItem('projects'),
+      orderableDocumentListDeskItem({type: 'projects', title: 'Projects', S, context}),
     ])
