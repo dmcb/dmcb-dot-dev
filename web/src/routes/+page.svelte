@@ -46,7 +46,7 @@
     <div class="profile">
       {#if data.siteSettings.portrait}
       <div class="portrait">
-        <AccessibleImage image={data.siteSettings.portrait} width="198" />
+        <AccessibleImage image={data.siteSettings.portrait} width={198} />
       </div>
       {/if}
       <div class="inline">
