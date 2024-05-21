@@ -1,4 +1,6 @@
 <script>
+  import AccessibleImage from '$lib/components/accessibleImage.svelte';
+
   export let data;
 </script>
 
@@ -17,7 +19,7 @@
     transition: transform 0.3s;
     margin-right: 1em;
 
-    img {
+    :global(img) {
       width: 90%;
       height: 90%;
       margin-left: 5%;
@@ -42,9 +44,9 @@
 <section>
   <div class="wrapper">
     <div class="profile">
-      {#if data.siteSettings.portraitUrl}
+      {#if data.siteSettings.portrait}
       <div class="portrait">
-        <img src={data.siteSettings.portraitUrl + "?fm=webp&w=216"} alt={data.siteSettings.portraitAlt} />
+        <AccessibleImage image={data.siteSettings.portrait} width={198} />
       </div>
       {/if}
       <div class="inline">

@@ -1,15 +1,15 @@
 import { error } from '@sveltejs/kit';
 import { client } from '$lib/sanity/client';
-import { siteSettingsQuery } from '$lib/sanity/queries';
+import { projectsQuery } from '$lib/sanity/queries';
 
 export const prerender = true;
 
 export async function load() {
-	const siteSettings_promise = client.fetch(siteSettingsQuery);
-	const siteSettings = await siteSettings_promise;
-	if (siteSettings) {
+	const projects_promise = client.fetch(projectsQuery);
+	const projects = await projects_promise;
+	if (projects) {
 		return {
-			siteSettings,
+			projects,
 		};
 	}
 
