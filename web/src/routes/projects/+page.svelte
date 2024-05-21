@@ -1,5 +1,6 @@
 <script>
   import PortableText from '$lib/components/portableText.svelte';
+  import AccessibleImage from '$lib/components/accessibleImage.svelte';
 
   export let data;
 </script>
@@ -79,9 +80,11 @@
               </div>
             </a>
           {/if}
-          <!-- {#each project.images as image}
-            <img src="{image}" alt="{image.alt}" />
-          {/each} -->
+          {#if project.images}
+          {#each project.images as image}
+            <AccessibleImage image={image} />
+          {/each}
+          {/if}
         </li>
       {/each}
     </ul>

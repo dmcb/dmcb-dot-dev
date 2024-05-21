@@ -1,7 +1,7 @@
-<script lang="ts">
+<script>
   import { PortableText } from '@portabletext/svelte';
 
-  export let value: Sanity.PageContent;
+  export let value;
 </script>
 
-<PortableText value={value} />
+<PortableText value={value} components={{}} />
