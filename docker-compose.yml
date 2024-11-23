@@ -9,7 +9,6 @@ services:
       - "5173"
     volumes:
       - "./web:/svelte-sanity/"
-    restart: "on-failure"
     env_file:
       - "./web/.env"
     depends_on:
