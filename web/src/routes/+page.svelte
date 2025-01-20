@@ -78,7 +78,7 @@
       }
     }
 
-    &:hover {
+    &:hover, &:focus {
       background-color: #a82f8f;
 
       svg {
