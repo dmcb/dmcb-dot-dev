@@ -17,7 +17,7 @@
       </div>
     </div>
     <p>I&apos;ve been a web geek forever. I care about inclusive and positive developer culture, and I love meaningful technology experiences.</p>
-    <a class="button" href="https://calendly.com/d-mcburney/office-hours">Schedule a chat <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+    <a class="button" href="https://calendly.com/d-mcburney/office-hours"><span>Schedule a chat <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
   </div>
 </section>
 
@@ -60,13 +60,34 @@
 
   a.button {
     display: inline-flex;
-    padding: 0.5em 0.8em 0.5em 1em;
-    background-color: #bd41a6;
-    color: white;
     text-decoration: none;
-    border-radius: 0.5em;
     margin-top: 1em;
-    transition: background-color 0.3s;
+
+    span {
+      display: inline-flex;
+      padding: 0.5em 0.8em 0.5em 1em;
+      color: white;
+      background-color: #bd41a6;
+      border-radius: 1.5em;
+      transition: transform 0.15s;
+    }
+
+    &::after {
+      width: 100%;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      border-radius: 1.5em;
+      background-color: #000;
+      z-index: -1;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #fff;
+      }
+    }
 
     svg {
       margin-left: 0.25em;
@@ -79,7 +100,9 @@
     }
 
     &:hover, &:focus {
-      background-color: #a82f8f;
+      span {
+        transform: translateY(3px);
+      }
 
       svg {
         animation: arrow-loop 0.6s infinite;
