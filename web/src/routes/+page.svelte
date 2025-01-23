@@ -78,15 +78,11 @@
       display: block;
       height: 100%;
       position: absolute;
-      top: 3px;
+      top: 4px;
       left: 0;
       border-radius: 1.5em;
-      background-color: #000;
+      background-color: #8628b5;
       z-index: -1;
-
-      @media (prefers-color-scheme: dark) {
-        background-color: #fff;
-      }
     }
 
     svg {
@@ -101,7 +97,7 @@
 
     &:hover, &:focus {
       span {
-        transform: translateY(3px);
+        transform: translateY(4px);
       }
 
       svg {
