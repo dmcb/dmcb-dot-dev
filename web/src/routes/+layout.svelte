@@ -1,8 +1,12 @@
 <script>
   import '../../node_modules/modern-normalize/modern-normalize.css';
+  import { dev } from '$app/environment';
+  import { injectAnalytics } from '@vercel/analytics/sveltekit';
   import { page } from '$app/stores';
 
   export let data;
+
+  injectAnalytics({ mode: dev ? 'development' : 'production' });
   
   let navExpanded = false;
 </script>

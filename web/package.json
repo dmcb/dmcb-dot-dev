@@ -39,6 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sanity/client": "^6.18.2",
+		"@vercel/analytics": "^1.5.0",
 		"groq": "^3.42.1"
 	}
 }
