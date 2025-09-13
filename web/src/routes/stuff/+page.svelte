@@ -13,10 +13,9 @@
 
     li {
       margin-bottom: 2em;
-      margin-left: -2em;
-      margin-right: -2em;
       padding: 1.5em 2em;
       background-color: #eee;
+      border-radius: 0.5em;
 
       h2 {
         margin-top: 0;
@@ -78,9 +77,8 @@
 
 <section>
   <div class="wrapper">
-    <h1>Projects</h1>
-    <p>You can learn more about my professional projects at <a href="https://evanshunt.com" target="_blank">evanshunt.com</a>.</p>
-    <p>This is a space for my personal projects that I think are fun. Rough and in progress, these exist here in plain sight purely as motivation for me to keep going, but may serve as a useful reference for someone — your results may vary.</p>
+    <h1>Stuff</h1>
+    <p>I love to build. Here are some recent hobby projects.</p>
     <ul class="projects">
       {#each data.projects as project}
         <li>

@@ -351,9 +351,10 @@
       background-image: url("/battlestation.webp");
       background-size: cover;
       background-position: bottom center;
-      height: 36vh;
+      height: 8vh;
+      opacity: 0;
       width: 100%;
-      transition: height 0.3s;
+      transition: height 0.3s, opacity 0.3s;
 
       @media (prefers-color-scheme: dark) {
         background-image: url("/battlestation-dark.webp");
@@ -367,54 +368,9 @@
     header.index {
       div.banner {
         height: 52vh;
+        opacity: 1;
       }
     }
-
-    // section.on-tap {
-    //   .things {
-    //     margin: 0;
-    //     padding: 0;
-    //     display: grid;
-    //     column-gap: 2em;
-    //     row-gap: 1em;
-    //     place-items: center;
-    //     place-content: center;
-    //     grid-template-columns: 1fr 1fr;
-    //   }
-
-    //   .thing {
-    //     display: block;
-    //     aspect-ratio: 1;
-
-    //     h2 {
-    //       margin-top: 0;
-    //     }
-    //   }
-
-    //   img {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: contain;
-    //     transform: scale(0.93);
-    //     filter: drop-shadow(8px 0 0 #bd41a6) drop-shadow(0 8px 0 #bd41a6)
-    //       drop-shadow(-8px 0 0 #bd41a6) drop-shadow(0 -8px 0 #bd41a6);
-    //   }
-
-    //   @media only screen and (min-width: 720px) {
-    //     .things {
-    //       grid-template-columns: 1fr 1fr 1fr;
-    //       column-gap: 3em;
-    //       row-gap: 1.5em;
-    //     }
-    //   }
-
-    //   @media only screen and (min-width: 1200px) {
-    //     .things {
-    //       column-gap: 4em;
-    //       row-gap: 2em;
-    //     }
-    //   }
-    // }
 
 </style>
 
@@ -433,14 +389,11 @@
         <a href="#content" on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} class="skip">Skip Navigation</a>
         <ul>
           <li class={$page.url.pathname == "/" ? "active" : ""}>
-            <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/">About Me</a>
+            <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/">dmcb.dev</a>
           </li>
-          <!-- <li class={$page.url.pathname == "/on-tap" ? "active" : ""}>
-            <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/on-tap">What's On Tap</a>
-          </li> -->
-          <!-- <li class={$page.url.pathname == "/projects" ? "active" : ""}>
-            <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/projects">Projects</a>
-          </li> -->
+          <li class={$page.url.pathname == "/fun" ? "active" : ""}>
+            <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/stuff">Stuff</a>
+          </li>
           <li>
             <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="https://medium.com/@d.mcburney">Writing</a>
           </li>
