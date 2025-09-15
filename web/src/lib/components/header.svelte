@@ -73,6 +73,7 @@
     font-weight: 500;
     background-color: #000;
     font-size: 1.25rem;
+    z-index: 10;
   }
 
   nav a {
