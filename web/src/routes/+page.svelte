@@ -4,25 +4,23 @@
   export let data;
 </script>
 
-<section>
-  <div class="wrapper">
-    <div class="profile">
-      {#if data.siteSettings.portrait}
-      <div class="portrait">
-        <AccessibleImage image={data.siteSettings.portrait} width={198} />
-      </div>
-      {/if}
-      <div class="inline">
-        <h1>I&apos;m Derek McBurney</h1><p>, Head of Technology at <a href="https://www.evanshunt.com/">Evans Hunt</a>.</p>
-      </div>
+<section class="intro">
+  <div class="profile">
+    {#if data.siteSettings.portrait}
+    <div class="portrait">
+      <AccessibleImage image={data.siteSettings.portrait} width={198} />
     </div>
-    <p>I&apos;ve been a web geek forever.</p><p>I love building meaningful technology experiences and the teams to grow them.</p>
-    <a class="button" href="https://calendly.com/d-mcburney/office-hours"><span>Schedule a chat <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+    {/if}
+    <div class="inline">
+      <h1>I&apos;m Derek McBurney</h1><p>, Head of Technology at <a href="https://www.evanshunt.com/">Evans Hunt</a>.</p>
+    </div>
   </div>
+  <p>I&apos;ve been a web geek forever, and love building meaningful technology experiences and the teams to grow them.</p>
+  <a class="button" href="https://calendly.com/d-mcburney/office-hours"><span>Schedule a chat <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
 </section>
 
 
-<style lang="scss">
+<style>
   div.profile {
     display: flex;
     align-items: center;
@@ -37,14 +35,13 @@
     transition: transform 0.3s;
     margin-right: 1em;
 
-    :global(img) {
+    & > img {
       width: 90%;
       height: 90%;
       margin-left: 5%;
       margin-top: 5%;
       border-radius: 100%;
       padding: 0;
-
     }
 
     &:hover {
@@ -58,12 +55,22 @@
     }
   }
 
+  .inline h1 {
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  .inline h1, .inline h1 + p {
+    display: inline;
+  }
+
   a.button {
     display: inline-flex;
     text-decoration: none;
     margin-top: 1em;
+    position: relative;
 
-    span {
+    & span {
       display: inline-flex;
       padding: 0.5em 0.8em 0.5em 1em;
       color: white;
@@ -85,7 +92,7 @@
       z-index: -1;
     }
 
-    svg {
+    & svg {
       margin-left: 0.25em;
       width: 1em;
       animation: arrow-pulse 3s infinite;
@@ -96,11 +103,11 @@
     }
 
     &:hover, &:focus {
-      span {
+      & span {
         transform: translateY(4px);
       }
 
-      svg {
+      & svg {
         animation: arrow-loop 0.6s infinite;
 
         @media (prefers-reduced-motion) {
