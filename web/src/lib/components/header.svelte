@@ -199,10 +199,14 @@
 
   #nav-content {
     transition: transform 0.3s;
-    transform: translateY(-100%);
+    transform: translate3d(0, -100%, 0);
     padding: 1rem 0;
     margin-top: -3em;
     background-color: #000;
+  }
+
+  #nav-content * {
+    transform: translate3d(0, 0, 0);
   }
 
   #nav-content ul {
@@ -234,7 +238,7 @@
   }
 
   nav.open #nav-content {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 
   nav.open #nav-content ul {
@@ -278,7 +282,7 @@
 
     #nav-content {
       margin-top: 0;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
       position: static;
       padding: 0;
       transition: transform 0s;
