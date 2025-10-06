@@ -5,79 +5,59 @@
   export let data;
 </script>
 
-<style lang="scss">
-  ul.projects {
-    list-style: none;
-    padding: 0;
-    margin-top: 2em;
+<h1>Stuff I'm building</h1>
+<p>My hobby projects that I keep playing around with</p>
 
-    li {
-      margin-bottom: 2em;
-      padding: 1.5em 2em;
-      background-color: #eee;
-      border-radius: 0.5em;
+<article>
+  <a href="https://5e-spellbook.app">
+    <h2>5e Spellbook Builder</h2>
+    <dl>
+      <dt>Tech</dt>
+      <dd>SvelteKit</dd>
+    </dl>
+    <p>
+      I love D&D and wanted to build the fastest, most frictionless web app to build spellbooks and look up 2024 and 2014 rules.
+    </p>
+  </a>
+</article>
 
-      h2 {
-        margin-top: 0;
-      }
+<p>Stuff I like right now</p>
+<ul>
+  <li>
+    <a href="https://boardgamegeek.com/boardgame/359871/arcs">
+      <h3>Arcs</h3>
+      <p>Board game</p>
+    </a>
+  </li>
+  <li>
+    <a href="https://landfall.se/peak">
+      <h3>PEAK</h3>
+      <p>Video game</p>
+    </a>
+  </li>
+</ul>
 
-      @media (prefers-color-scheme: dark) {
-        background-color: #222;
-      }
-    }
-    @media only screen and (min-width: 720px) {
-      .content {
-        font-size: 0.9em;
-      }
-    }
+<style>
+  h1, p {
+    text-align: center;
   }
 
-  .images {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    :global(img) {
-      width: calc(33% - 0.1em);
-      aspect-ratio: 1;
-      object-fit: cover;
-    }
+  article {
+    padding: 1rem;
+    background-color: var(--faint-background-color);
+    border-radius: 0.5rem;
   }
 
-  a.button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin-top: 0.5em;
-    border: 1px solid #333;
-    border-radius: 0.25em;
-    background-color: #333;
-    color: white;
+  article a {
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 1rem;
-
-    &:hover {
-      background-color: white;
-      color: #333;
-    }
-
-    svg {
-      width: 1rem;
-      height: 1rem;
-      margin-left: 0.5em;
-    }
-
-    > div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    color: inherit;
   }
 </style>
 
+<!-- 
 <section>
   <div class="wrapper">
-    <h1>Stuff</h1>
+    <h1 class="sr-only">Stuff</h1>
     <p>I love to build. Here are some recent hobby projects.</p>
     <ul class="projects">
       {#each data.projects as project}
@@ -112,4 +92,4 @@
       {/each}
     </ul>
   </div>
-</section>
+</section> -->

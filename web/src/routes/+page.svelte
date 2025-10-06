@@ -74,7 +74,7 @@
       display: inline-flex;
       padding: 0.5em 0.8em 0.5em 1em;
       color: white;
-      background-color: #bd41a6;
+      background-color: var(--link-color);
       border-radius: 1.5em;
       transition: transform 0.15s;
     }
@@ -88,7 +88,7 @@
       top: 4px;
       left: 0;
       border-radius: 1.5em;
-      background-color: #8628b5;
+      background-color: var(--link-hover-color);
       z-index: -1;
     }
 

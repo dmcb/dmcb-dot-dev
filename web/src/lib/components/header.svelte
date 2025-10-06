@@ -20,7 +20,7 @@
         <div class="menu">
           <ul class="links">
             <li class={$page.url.pathname == "/" ? "active" : ""}>
-              <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/">dmcb.dev</a>
+              <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/">About Me</a>
             </li>
             <li class={$page.url.pathname == "/stuff" ? "active" : ""}>
               <a on:click={() => {navExpanded = false}} on:focus={() => {navExpanded = true}} on:blur={() => { navExpanded = false }} href="/stuff">Stuff</a>
@@ -71,44 +71,44 @@
     right: 0;
     height: 3.75rem;
     font-weight: 500;
-    background-color: #000;
+    background-color: var(--nav-background-color);
     font-size: 1.25rem;
     z-index: 10;
   }
 
   nav a {
     text-decoration: none;
-    color: #999;
+    color: var(--nav-text-color);
 
     &:active,
     &:focus,
     &:hover {
-      color: #fff;
+      color: var(--nav-hover-color);
     }
 
     & svg {
       transition: fill 0.3s, color 0.3s;
-      fill: #999;
-      color: #999;
+      fill: var(--nav-text-color);
+      color: var(--nav-text-color);
       width: 100%;
       line-height: 0;
 
       & path {
         transition: fill 0.3s, color 0.3s;
-        fill: #999;
-        color: #999;
+        fill: var(--nav-text-color);
+        color: var(--nav-text-color);
       }
     }
 
     &:active svg,
     &:focus svg,
     &:hover svg {
-      fill: #fff;
-      color: #fff;
+      fill: var(--nav-hover-color);
+      color: var(--nav-hover-color);
 
       & path {
-        fill: #fff;
-        color: #fff;
+        fill: var(--nav-hover-color);
+        color: var(--nav-hover-color);
       }
     }
   }
@@ -144,7 +144,7 @@
 
   #nav-toggle button {
     background-color: transparent;
-    color: #fff;
+    color: var(--nav-text-color);
     margin: 0;
     padding: 0;
     border: 0;
@@ -160,7 +160,7 @@
     position: absolute;
     height: 0.25em;
     width: 100%;
-    background: #fff;
+    background: var(--nav-text-color);
     border-radius: 0.25em;
     opacity: 1;
     left: 0;
@@ -202,7 +202,7 @@
     transform: translate3d(0, -100%, 0);
     padding: 1rem 0;
     margin-top: -3em;
-    background-color: #000;
+    background-color: var(--nav-background-color);
   }
 
   #nav-content * {
