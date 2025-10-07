@@ -6,7 +6,7 @@
 
 <header class={$page.data.bannerType}>
   <nav class={navExpanded ? "open" : "closed"}>
-    <div id="nav-toggle" class="wrapper">
+    <div id="nav-toggle">
       <button on:click={() => { navExpanded = !navExpanded}} aria-hidden="true" tabIndex="-1" class={navExpanded ? "open" : "closed"}>
         <div></div>
         <div></div>
@@ -69,11 +69,12 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3.75rem;
     font-weight: 500;
     background-color: var(--nav-background-color);
     font-size: 1.25rem;
     z-index: 10;
+    border-bottom: 3px solid var(--link-color);
+    padding: 2rem 0;
   }
 
   nav a {
@@ -136,10 +137,9 @@
 
 
   #nav-toggle {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 
   #nav-toggle button {
@@ -148,8 +148,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    width: 2em;
-    height: 1.5em;
+    width: 2rem;
+    height: 1.5rem;
     cursor: pointer;
     position: relative;
     z-index: 2;
@@ -158,9 +158,9 @@
   #nav-toggle button div {
     display: block;
     position: absolute;
-    height: 0.25em;
+    height: 0.25rem;
     width: 100%;
-    background: var(--nav-text-color);
+    background: var(--nav-hover-color);
     border-radius: 0.25em;
     opacity: 1;
     left: 0;
@@ -198,22 +198,14 @@
   }
 
   #nav-content {
-    transition: transform 0.3s;
-    transform: translate3d(0, -100%, 0);
-    padding: 1rem 0;
-    margin-top: -3em;
-    background-color: var(--nav-background-color);
-  }
-
-  #nav-content * {
-    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.3s, margin-top 0.3s;
+    margin-top: -11em;
   }
 
   #nav-content ul {
-    opacity: 0;
     margin: 0;
     padding: 0;
-    transition: opacity 0.3s;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -238,10 +230,7 @@
   }
 
   nav.open #nav-content {
-    transform: translate3d(0, 0, 0);
-  }
-
-  nav.open #nav-content ul {
+    margin-top: 0;
     opacity: 1;
   }
 
@@ -285,7 +274,7 @@
       transform: translate3d(0, 0, 0);
       position: static;
       padding: 0;
-      transition: transform 0s;
+      opacity: 1;
     }
 
     #nav-content .menu {
@@ -294,7 +283,6 @@
     }
 
     #nav-content ul {
-      opacity: 1;
       flex-direction: row;
       gap: 2em;
     }
