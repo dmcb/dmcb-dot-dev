@@ -4,19 +4,21 @@
   export let data;
 </script>
 
-<section class="intro">
+<section class="narrow">
   <div class="profile">
     {#if data.siteSettings.portrait}
     <div class="portrait">
       <AccessibleImage image={data.siteSettings.portrait} width={198} />
     </div>
     {/if}
-    <div class="inline">
-      <h1>I&apos;m Derek McBurney</h1><p>, Head of Technology at <a href="https://www.evanshunt.com/">Evans Hunt</a>.</p>
+    <div class="text">
+      <h1>I&apos;m Derek McBurney</h1><p>Head of Technology at <a href="https://www.evanshunt.com/">Evans Hunt</a></p>
     </div>
   </div>
   <p>I&apos;ve been a web geek forever, and love building meaningful technology experiences and the teams to grow them.</p>
-  <a class="button" href="https://calendly.com/d-mcburney/office-hours"><span>Schedule a chat <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+  <div class="actions">
+    <a class="button" href="https://calendly.com/d-mcburney/office-hours"><span>Schedule a chat <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+  </div>
 </section>
 
 
@@ -24,11 +26,12 @@
   div.profile {
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   div.portrait {
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
     border-radius: 100%;
     background-color: #bd41a6;
     flex-shrink: 0;
@@ -55,13 +58,9 @@
     }
   }
 
-  .inline h1 {
-    font-size: 1em;
-    font-weight: 500;
-  }
-
-  .inline h1, .inline h1 + p {
-    display: inline;
+  div.actions {
+    display: flex;
+    justify-content: flex-end;
   }
 
   a.button {

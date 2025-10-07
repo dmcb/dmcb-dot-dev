@@ -16,9 +16,7 @@
 
 <Header />
 <main id="content">
-  <div class="wrapper">
-    <slot />
-  </div>
+  <slot />
 </main>
 
 <style>
@@ -51,18 +49,7 @@
     background-color: var(--background-color);
     line-height: 1.4em;
     font-weight: 400;
-
-    @media only screen and (min-width: 720px) {
-      font-size: 18px;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      font-size: 19px;
-    }
-
-    @media only screen and (min-width: 1600px) {
-      font-size: 20px;
-    }
+    font-size: 16px;
   }
 
   :global(a) {
@@ -77,42 +64,46 @@
     }
   }
 
-  :global(h1), :global(h2), :global(strong) {
-    font-size: 1em;
+  :global(h1, h2, strong) {
     font-weight: 500;
     color: var(--dark-text-color);
   }
 
-  :global(h1) {
-    font-weight: 600;
-    font-size: 1.25em;
-    margin-top: 0;
-    margin-bottom: 0.5em;
+  :global(h1, h2) {
+    letter-spacing: -0.03rem;
+    margin: 0;
   }
 
-  :global(.wrapper) {
+  :global(h1) {
+    font-size: 1.2rem;
+  }
+
+  :global(h1 + p) {
+    margin: 0;
+  }
+
+  :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  :global(h2) {
+    font-size: 1.6rem;
+  }
+
+  :global(.wrapper, main) {
     margin-left: auto;
     margin-right: auto;
-    max-width: calc(100% - 4rem);
-
-    @media only screen and (min-width: 480px) {
-      max-width: 380px;
-    }
-
-    @media only screen and (min-width: 720px) {
-      max-width: 640px;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      max-width: 800px;
-    }
-
-    @media only screen and (min-width: 1600px) {
-      max-width: 920px;
-    }
+    max-width: calc(920px - 4rem);
+    padding: 0 2rem;
   }
 
-  main {
+  :global(.narrow) {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  :global(section) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }

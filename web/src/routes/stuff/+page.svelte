@@ -5,8 +5,10 @@
   export let data;
 </script>
 
-<h1>Stuff I'm building</h1>
-<p>My hobby projects that I keep playing around with</p>
+<section class="narrow">
+  <h1>Stuff</h1>
+  <p>Recent hobby projects I'm working and things I'm into</p>
+</section>
 
 <article>
   <a href="https://5e-spellbook.app">
@@ -38,17 +40,14 @@
 </ul>
 
 <style>
-  h1, p {
-    text-align: center;
-  }
-
   article {
-    padding: 1rem;
     background-color: var(--faint-background-color);
     border-radius: 0.5rem;
   }
 
   article a {
+    display: block;
+    padding: 2rem;
     text-decoration: none;
     color: inherit;
   }
