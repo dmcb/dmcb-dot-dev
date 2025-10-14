@@ -73,7 +73,6 @@
     background-color: var(--nav-background-color);
     font-size: 1.25rem;
     z-index: 10;
-    border-bottom: 3px solid var(--link-color);
     padding: 2rem 0;
   }
 
@@ -239,10 +238,10 @@
     background-image: url("/battlestation.webp");
     background-size: cover;
     background-position: bottom center;
-    height: 3rem;
+    height: 4rem;
     opacity: 0;
     width: 100%;
-    transition: height 0.3s, opacity 0.3s;
+    transition: height 0.2s, opacity 0.2s;
 
     @media (prefers-color-scheme: dark) {
       background-image: url("/battlestation-dark.webp");
@@ -258,7 +257,7 @@
     opacity: 1;
   }
 
-  @media only screen and (min-width: 720px) {
+  @media only screen and (min-width: 640px) {
     nav {
       font-size: 1rem;
       padding: 0.75rem 0;
@@ -292,5 +291,8 @@
       gap: 1em;
     }
 
+    div.banner {
+      height: 3rem;
+    }
   }
 </style>

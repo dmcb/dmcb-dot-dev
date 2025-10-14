@@ -23,6 +23,10 @@
 
 
 <style>
+  section {
+    padding: 2rem 0;
+  }
+
   div.profile {
     display: flex;
     align-items: center;

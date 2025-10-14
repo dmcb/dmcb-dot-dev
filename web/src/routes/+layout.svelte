@@ -24,21 +24,22 @@
 		/* Colours */
     --background-color: #fff;
     --faint-background-color: #f5f5f5;
-    --dark-text-color: #000;
-		--text-color: #555;
+    --dark-text-color: #28232c;
+		--text-color: #49474b;
     --nav-background-color: #000;
     --nav-text-color: #999;
     --nav-hover-color: #fff;
     --link-color: #bd41a6;
     --link-hover-color: #8628b5;
+    --font-size-small: 0.65rem;
   }
 
   @media (prefers-color-scheme: dark) {
 		:root {
-			--background-color: #000;
-			--faint-background-color: #111;
+			--background-color: #1f1b22;
+			--faint-background-color: #2f2934;
 			--dark-text-color: #fff;
-      --text-color: #999;
+      --text-color: #c7becb;
 		}
 	}
 
@@ -71,7 +72,7 @@
 
   :global(h1, h2) {
     letter-spacing: -0.03rem;
-    margin: 0;
+    margin: 0 0 0.325rem 0;
   }
 
   :global(h1) {
@@ -80,6 +81,10 @@
 
   :global(h1 + p) {
     margin: 0;
+  }
+
+  :global(p:first-child) {
+    margin-top: 0;
   }
 
   :global(p:last-child) {
@@ -103,8 +108,13 @@
     margin-right: auto;
   }
 
+  :global(.extra-narrow) {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   :global(section) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 3rem 0;
   }
 </style>

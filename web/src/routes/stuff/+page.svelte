@@ -5,51 +5,183 @@
   export let data;
 </script>
 
-<section class="narrow">
-  <h1>Stuff</h1>
-  <p>Recent hobby projects I'm working and things I'm into</p>
+<section class="extra-narrow">
+  <h1>I like making stuff</h1>
+  <p>When I'm not doing professional work I try to find time for hobby projects and other things.</p>
 </section>
 
 <article>
   <a href="https://5e-spellbook.app">
-    <h2>5e Spellbook Builder</h2>
-    <dl>
-      <dt>Tech</dt>
-      <dd>SvelteKit</dd>
-    </dl>
-    <p>
-      I love D&D and wanted to build the fastest, most frictionless web app to build spellbooks and look up 2024 and 2014 rules.
-    </p>
+    <div class="meta">
+      <span class="category">Making</span>
+      <h2>5e Spellbook Builder</h2>
+      <p>
+        I love D&D and wanted to build the fastest, most frictionless web app to build spellbooks, look up 2024 and 2014 rules, and play with digital cards or print them.
+      </p>
+    </div>
+    <div class="tags">
+      <span class="tag">Sveltekit</span>
+    </div>
   </a>
 </article>
 
-<p>Stuff I like right now</p>
 <ul>
   <li>
-    <a href="https://boardgamegeek.com/boardgame/359871/arcs">
-      <h3>Arcs</h3>
-      <p>Board game</p>
+    <a href="https://boardgamegeek.com/boardgame/359871/arcs" style="--background-image: url('/images/arcs.png')">
+      <div class="meta">
+        <span class="category">Enjoying</span>
+        <span class="title">Arcs</span>
+      </div>
+      <div class="tags">
+        <span class="tag">Board game</span>
+      </div>
     </a>
   </li>
   <li>
-    <a href="https://landfall.se/peak">
-      <h3>PEAK</h3>
-      <p>Video game</p>
+    <a href="https://landfall.se/peak" style="--background-image: url('/images/peak.png')">
+      <div class="meta">
+        <span class="category">Enjoying</span>
+        <span class="title">PEAK</span>
+      </div>
+      <div class="tags">
+        <span class="tag">Video game</span>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="https://tv.apple.com/ca/show/slow-horses/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o" style="--background-image: url('/images/slow-horses.png')">
+      <div class="meta">
+        <span class="category">Enjoying</span>
+        <span class="title">Slow Horses</span>
+      </div>
+      <div class="tags">
+        <span class="tag">TV show</span>
+      </div>
     </a>
   </li>
 </ul>
 
 <style>
-  article {
-    background-color: var(--faint-background-color);
-    border-radius: 0.5rem;
+  section {
+    text-align: center;
   }
 
-  article a {
+  .category {
     display: block;
-    padding: 2rem;
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+  }
+
+  .title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--dark-text-color);
+  }
+
+  article, ul li {
+    display: block;
+    padding: 0.5rem;
+    background-color:  var(--faint-background-color);
+    border-radius: 0.75rem;
+    transition: background-color 0.3s;
+  }
+
+  article:has(a:hover), ul li:has(a:hover) {
+    background-color: var(--link-color);
+  }
+
+  article a, ul li a {
+    padding: 1.5rem;
+    background-color:  var(--faint-background-color);
+    border-radius: 0.5rem;
     text-decoration: none;
     color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  article {
+    aspect-ratio: 1;
+  }
+
+  ul {
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    aspect-ratio: 2;
+    flex-basis: 100%;
+  }
+
+  ul li a * {
+    z-index: 2;
+  }
+
+  ul li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3.75rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: red;;
+    background-image: var(--background-image);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  ul li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3.75rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    background: radial-gradient(170% 100% at 100% 100%, transparent 85%, var(--faint-background-color) 100%);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+    color: var(--link-color);
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    background-color: var(--background-color);
+    line-height: 1rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    article {
+      aspect-ratio: 2;
+    }
+
+    ul {
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+
+    ul li {
+      max-width: calc(100% / 3 - 0.67rem);
+      aspect-ratio: 1;
+    }
   }
 </style>
 
