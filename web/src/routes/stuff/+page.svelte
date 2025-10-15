@@ -98,7 +98,6 @@
     border-radius: 0.75rem;
     transition: background-color 0.3s;
     overflow: hidden;
-    container-type: inline-size;
   }
 
   article:has(a:hover), ul li:has(a:hover) {
@@ -120,6 +119,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    container-type: inline-size;
   }
 
   ul {
@@ -133,7 +133,6 @@
   }
 
   ul li {
-    aspect-ratio: 2;
     width: 100%;
   }
 
@@ -225,7 +224,7 @@
 
     ul li {
       max-width: calc(100% / 3 - 0.67rem);
-      aspect-ratio: 1;
+      min-height: clamp(10rem, 30vw, 15rem);
     }
 
     ul li a:before {
