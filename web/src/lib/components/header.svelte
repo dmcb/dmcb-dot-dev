@@ -138,7 +138,7 @@
   #nav-toggle {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
   }
 
   #nav-toggle button {
