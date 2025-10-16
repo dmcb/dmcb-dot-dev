@@ -72,51 +72,49 @@
     text-decoration: none;
     margin-top: 1em;
     position: relative;
+  }
 
-    & span {
-      display: inline-flex;
-      padding: 0.5em 0.8em 0.5em 1em;
-      color: white;
-      background-color: var(--link-color);
-      border-radius: 1.5em;
-      transition: transform 0.15s;
+  a.button span {
+    display: inline-flex;
+    padding: 0.5em 0.8em 0.5em 1em;
+    color: white;
+    background-color: var(--link-color);
+    border-radius: 1.5em;
+    transition: transform 0.15s;
+  }
+
+  a.button::after {
+    width: 100%;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    border-radius: 1.5em;
+    background-color: var(--link-hover-color);
+    z-index: -1;
+  }
+
+  a.button svg {
+    margin-left: 0.25em;
+    width: 1em;
+    animation: arrow-pulse 3s infinite;
+
+    @media (prefers-reduced-motion) {
+      animation: none;
     }
+  }
 
-    &::after {
-      width: 100%;
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 4px;
-      left: 0;
-      border-radius: 1.5em;
-      background-color: var(--link-hover-color);
-      z-index: -1;
-    }
+  a.button:hover span, a.button:focus span {
+    transform: translateY(4px);
+  }
 
-    & svg {
-      margin-left: 0.25em;
-      width: 1em;
-      animation: arrow-pulse 3s infinite;
+  a.button:hover svg, a.button:focus svg {
+  animation: arrow-loop 0.6s infinite;
 
-      @media (prefers-reduced-motion) {
-        animation: none;
-      }
-    }
-
-    &:hover, &:focus {
-      & span {
-        transform: translateY(4px);
-      }
-
-      & svg {
-        animation: arrow-loop 0.6s infinite;
-
-        @media (prefers-reduced-motion) {
-          animation: none;
-        }
-      }
+    @media (prefers-reduced-motion) {
+      animation: none;
     }
   }
 

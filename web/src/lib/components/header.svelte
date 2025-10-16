@@ -71,7 +71,7 @@
     right: 0;
     font-weight: 500;
     background-color: var(--nav-background-color);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     z-index: 10;
     padding: 2rem 0;
   }

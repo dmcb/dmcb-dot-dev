@@ -100,7 +100,7 @@
     overflow: hidden;
   }
 
-  article:has(a:hover), ul li:has(a:hover) {
+  article:has(a:hover), ul li:has(a:hover), article:has(a:focus), ul li:has(a:focus) {
     background-color: var(--link-color);
   }
 
@@ -197,11 +197,11 @@
     right: 10%;
   }
 
-  article a:hover .feature.spellbook img:first-child {
+  article a:hover .feature.spellbook img:first-child, article a:focus .feature.spellbook img:first-child {
     transform: rotate(-10deg) translateY(-2cqw) translateX(-0.5cqw);
   }
 
-  article a:hover .feature.spellbook img:last-child {
+  article a:hover .feature.spellbook img:last-child, article a:focus .feature.spellbook img:last-child {
     transform: rotate(18deg) translateY(-2.5cqw) translateX(0.5cqw);
   }
 
