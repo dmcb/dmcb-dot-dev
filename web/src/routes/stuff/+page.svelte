@@ -233,7 +233,7 @@
     max-width: 60%;
     right: -10%;
     bottom: -10%;
-    transition: transform 10s;
+    transition: transform 10s linear;
     transform-origin: 82.2% 85.2%;
     transform: rotate(-10deg);
   }
@@ -268,10 +268,6 @@
       top: 5.5rem;
       left: 0.5rem;
     }
-
-    /* ul li a:after {
-      background: radial-gradient(170% 100% at 100% 100%, transparent 85%, var(--faint-background-color) 100%);
-    } */
   }
 </style>
 
