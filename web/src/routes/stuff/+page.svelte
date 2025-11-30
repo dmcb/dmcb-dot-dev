@@ -73,6 +73,26 @@
   </li>
 </ul>
 
+<article>
+  <a href="https://solarsystems.dmcb.dev">
+    <div class="content">
+      <div class="meta">
+        <span class="category">Making</span>
+        <h2>Solar System Generator</h2>
+        <p>
+          Some people build train sets, I like making galaxies. The scale is all wrong because it wouldn't be interesting if it was right, but there's <em>some</em> science here.
+        </p>
+      </div>
+      <div class="tags">
+        <span class="tag">ThreeJS</span>
+      </div>
+    </div>
+    <div class="feature solar-system">
+      <img src="/images/solar-system.png" alt="A sun and a ringed planet" />
+    </div>
+  </a>
+</article>
+
 <style>
   section {
     text-align: center;
@@ -89,6 +109,10 @@
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--dark-text-color);
+  }
+
+  article, ul {
+    margin-bottom: 1rem;
   }
 
   article, ul li {
@@ -123,7 +147,6 @@
   }
 
   ul {
-    margin: 1rem 0;
     padding: 0;
     list-style: none;
     display: flex;
@@ -203,6 +226,20 @@
 
   article a:hover .feature.spellbook img:last-child, article a:focus .feature.spellbook img:last-child {
     transform: rotate(18deg) translateY(-2.5cqw) translateX(0.5cqw);
+  }
+
+  .feature.solar-system img {
+    position: absolute;
+    max-width: 60%;
+    right: -10%;
+    bottom: -10%;
+    transition: transform 1s;
+    transform-origin: 82.2% 85.2%;
+    transform: rotate(-10deg);
+  }
+
+  article a:hover .feature.solar-system img, article a:focus .feature.solar-system img {
+    transform: rotate(5deg);
   }
 
   .tag {
