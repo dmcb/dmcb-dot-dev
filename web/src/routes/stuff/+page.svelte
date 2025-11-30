@@ -233,7 +233,7 @@
     max-width: 60%;
     right: -10%;
     bottom: -10%;
-    transition: transform 1s;
+    transition: transform 10s;
     transform-origin: 82.2% 85.2%;
     transform: rotate(-10deg);
   }
